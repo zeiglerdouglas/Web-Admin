@@ -14,6 +14,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
+import java.net.URL;
+
+import static java.nio.channels.AsynchronousServerSocketChannel.open;
+
 
 public class setUP_local {
     public WebDriver driver;
@@ -30,8 +34,9 @@ public class setUP_local {
 //        WebDriverRunner.setWebDriver(driver);
         driver.manage().window().maximize();
 
-        System.out.println("");
+        System.out.println("открытие адреса");
         driver.navigate().to("https://10.0.200.191/#/login");
+
         System.out.println("");
 
     }
