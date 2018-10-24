@@ -1,28 +1,23 @@
-package setUp;
-
+package main.java.setUp;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import io.github.bonigarcia.wdm.DriverManagerType;
-import org.junit.After;
-import org.junit.Before;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
-import java.net.URL;
 
-import static java.nio.channels.AsynchronousServerSocketChannel.open;
 
 
 public class setUP_local {
     public WebDriver driver;
     @BeforeSuite()
     public void setUp(){
+        PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/resources/log4j.properties");
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
         caps.setBrowserName(BrowserType.CHROME);
