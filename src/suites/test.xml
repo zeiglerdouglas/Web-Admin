@@ -4,11 +4,10 @@
 	<suite name="Test Suite" verbose = "1">
 
 	<test name="Авторизация" enabled="true">
-
 		<classes>
 			<class name="autorisations.autorisation">
 				<methods>
-					<include name="Autorisation"/>
+					<include name="A"/>
 				</methods>
 			</class>
 		</classes>

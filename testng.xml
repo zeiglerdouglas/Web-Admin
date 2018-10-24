@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="1" name="Справочная система Фктион-МЦФЭР" junit="false" parallel="none" guice-stage="DEVELOPMENT" configfailurepolicy="skip" thread-count="5" skipfailedinvocationcounts="false" data-provider-thread-count="10" group-by-instances="false" preserve-order="true" allow-return-values="false">
+<suite verbose="1" name="Web Administration" junit="false" parallel="none" guice-stage="DEVELOPMENT" configfailurepolicy="skip" thread-count="5" skipfailedinvocationcounts="false" data-provider-thread-count="10" group-by-instances="false" preserve-order="true" allow-return-values="false">
 
 
 	<suite-files>
