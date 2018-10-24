@@ -38,5 +38,6 @@ public class setUP_local {
         System.out.println("закрываем драйвер");
                 driver.quit();
         }
+
     }
 
