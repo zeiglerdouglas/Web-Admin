@@ -40,6 +40,7 @@ public class setUP_local {
     @AfterSuite()
     public void tearDown() {
         System.out.println("закрываем драйвер");
+        System.out.println("Закрываем браузер");
                 driver.quit();
         }
 
