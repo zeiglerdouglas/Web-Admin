@@ -19,12 +19,10 @@ public class setUP_local {
     public WebDriver driver;
     @BeforeSuite()
     public void setUp(){
-//        DesiredCapabilities caps = new DesiredCapabilities();
-//        caps.setBrowserName("chrome");
-//        caps.setBrowserName(BrowserType.CHROME);
-//        caps.setPlatform(org.openqa.selenium.Platform.WINDOWS);
-//        if (browser.equalsIgnoreCase("Chrome"))
-//            caps = DesiredCapabilities.chrome();
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setBrowserName("chrome");
+        caps.setBrowserName(BrowserType.CHROME);
+        caps.setPlatform(org.openqa.selenium.Platform.WINDOWS);
 
         System.out.println("Запуск Chrome браузера");
         ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
