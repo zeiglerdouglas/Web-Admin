@@ -33,13 +33,12 @@ public class setUP_local {
         driver.manage().window().maximize();
 
         System.out.println("");
-        driver.navigate().to("http://www.rambler.ru");
+        driver.navigate().to("https://10.0.200.191/#/login");
         System.out.println("");
 
     }
     @AfterSuite()
     public void tearDown() {
-        System.out.println("закрываем драйвер");
         System.out.println("Закрываем браузер");
                 driver.quit();
         }
