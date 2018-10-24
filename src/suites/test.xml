@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+	<suite name="Time test Suite" verbose = "1">
+
+	<test name="OSS-4128:Калькулятор гос.пошлины по экономическим спорам (расчет пошлины по одному требованию)-Отображение" preserve-order="true" enabled="true">
+
+		<classes>
+			<class name="src">
+				<methods>
+					<include name="Autorisation"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+		</suite>
