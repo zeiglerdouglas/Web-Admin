@@ -52,4 +52,24 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Валидация полей" enabled="true">
+		<classes>
+			<class name="test.java.autorisations.formsAutorisations.validationPlace">
+				<methods>
+					<include name="title"/>
+					<include name="validationPlace"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+    <test name="Верификация пользователя" enabled="true">
+        <classes>
+            <class name="test.java.autorisations.formsAutorisations.verificationUsers">
+                <methods>
+                    <include name="title"/>
+                    <include name="verificationUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
