@@ -32,4 +32,24 @@
 			</class>
 		</classes>
 	</test>
+	<test name="Смена языка" enabled="true">
+		<classes>
+			<class name="test.java.autorisations.formsAutorisations.switchLanguage">
+				<methods>
+					<include name="title"/>
+					<include name="switchLanguage"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="Подсказки полей" enabled="true">
+		<classes>
+			<class name="test.java.autorisations.formsAutorisations.cluePlace">
+				<methods>
+					<include name="title"/>
+					<include name="cluePlace"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
 		</suite>
