@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-	<suite name="Test Suite" verbose="1" parallel="tests">
+	<suite name="Tests" verbose="1" >
 
-	<test name="Авторизация" enabled="true">
+	<test name="проверка открытия нужной нам страницы" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.autorisation">
 				<methods>
-					<include name="A"/>
+					<include name="title"/>
 				</methods>
 			</class>
 		</classes>
 	</test>
-
+    <test name="Успешная авторизация" enabled="true">
+        <classes>
+            <class name="test.java.autorisations.formsAutorisations.passAutorisation">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
