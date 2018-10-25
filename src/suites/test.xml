@@ -22,4 +22,14 @@
             </class>
         </classes>
     </test>
+	<test name="Ошибка авторизации" enabled="true">
+		<classes>
+			<class name="test.java.autorisations.formsAutorisations.failAutorisation">
+				<methods>
+					<include name="title"/>
+					<include name="failAutorizations"/>
+				</methods>
+			</class>
+		</classes>
+	</test>
 		</suite>
