@@ -58,4 +58,5 @@ public class passAutorisation extends setUP_local{
         }
         System.out.println("конец теста");
     }
+
 }
