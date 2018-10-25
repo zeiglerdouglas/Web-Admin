@@ -3,7 +3,7 @@
 
 	<suite name="Tests" verbose="1" >
 
-	<test name="проверка открытия нужной нам страницы" enabled="false">
+	<test name="проверка открытия нужной нам страницы" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.autorisation">
 				<methods>
@@ -12,7 +12,7 @@
 			</class>
 		</classes>
 	</test>
-    <test name="Успешная авторизация" enabled="false">
+    <test name="Успешная авторизация" enabled="true">
         <classes>
             <class name="test.java.autorisations.formsAutorisations.passAutorisation">
                 <methods>
@@ -22,7 +22,7 @@
             </class>
         </classes>
     </test>
-	<test name="Ошибка авторизации" enabled="false">
+	<test name="Ошибка авторизации" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.failAutorisation">
 				<methods>
@@ -32,7 +32,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Смена языка" enabled="false">
+	<test name="Смена языка" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.switchLanguage">
 				<methods>
