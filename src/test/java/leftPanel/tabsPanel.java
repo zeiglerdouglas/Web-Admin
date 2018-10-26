@@ -58,7 +58,7 @@ public class tabsPanel extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void leftPanelTrunOff() {
+    public void tabsPanel() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement wrapper = global.$(byClassName("app-wrapper"));
@@ -73,59 +73,15 @@ public class tabsPanel extends setUP_local {
         collLeftPanel.get(4).shouldBe(visible.because("настройки"));
         collLeftPanel.get(0).shouldBe(visible.because("система"));
 
-        System.out.println("закрыли sidebar");
-        System.out.println("определяем и кликаем - гамбургер");
-        SelenideElement main = wrapper.$(byClassName("navbar"));
-        SelenideElement hamburger = main.$(byClassName("hamburger-container"));
-        hamburger.shouldBe(visible);
-        hamburger.hover().click();
-
-        System.out.println("определение панели - сложилась");
-        SelenideElement hideSideBar = panelLeft.$(byClassName("el-menu--collapse"));
-        hideSideBar.shouldBe(visible);
-
-        collLeftPanel.get(1).shouldBe(visible.because("журналы"));
-        collLeftPanel.get(2).shouldBe(visible.because("консоль"));
-        collLeftPanel.get(3).shouldBe(visible.because("сервис"));
-        collLeftPanel.get(4).shouldBe(visible.because("настройки"));
-        collLeftPanel.get(0).shouldBe(visible.because("система"));
-
-        collLeftPanel.get(1).hover().shouldBe(visible);
-        collLeftPanel.get(2).hover().shouldBe(visible);
-        collLeftPanel.get(3).hover().shouldBe(visible);
-        collLeftPanel.get(4).hover().shouldBe(visible);
-        collLeftPanel.get(0).hover().shouldBe(visible);
-        collLeftPanel.get(2).hover().shouldBe(visible);
-
-        System.out.println("открыли sidebar");
-        hamburger.shouldBe(visible);
-        hamburger.hover().click();
-        System.out.println("панель видна");
-        panelLeft.shouldBe(visible);
-        SelenideElement sideBar = panelLeft.$(byClassName("el-menu"));
-        sideBar.shouldBe(visible);
-
-        System.out.println("элементы наместе");
-        collLeftPanel.get(1).shouldBe(visible.because("журналы"));
-        collLeftPanel.get(2).shouldBe(visible.because("консоль"));
-        collLeftPanel.get(3).shouldBe(visible.because("сервис"));
-        collLeftPanel.get(4).shouldBe(visible.because("настройки"));
-        collLeftPanel.get(0).shouldBe(visible.because("система"));
-
-        System.out.println("элементы выбираються");
-        collLeftPanel.get(1).hover().shouldBe(visible);
-        collLeftPanel.get(2).hover().shouldBe(visible);
-        collLeftPanel.get(3).hover().shouldBe(visible);
-        collLeftPanel.get(4).hover().shouldBe(visible);
-        collLeftPanel.get(0).hover().shouldBe(visible);
+        collLeftPanel.get(1).hover().click();
+        collLeftPanel.get(2).hover().click();
+        collLeftPanel.get(3).hover().click();
+        collLeftPanel.get(4).hover().click();
+        collLeftPanel.get(0).hover().click();
 
 
         System.out.println("конец теста");
     }
-    @Test(description = "левая панель разворачиваем")
-    public void leftPanelTrunOn() {
 
-        System.out.println("конец теста");
-    }
 
 }

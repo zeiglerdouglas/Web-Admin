@@ -73,7 +73,7 @@
         </classes>
     </test>
 	<!--левая панель-->
-	<test name="Сворачивание/Разворачивание панели" enabled="true">
+	<test name="Сворачивание/Разворачивание панели" enabled="false">
 		<classes>
 			<class name="test.java.leftPanel.turnOffOnPanel">
 				<methods>
@@ -85,4 +85,15 @@
 			</class>
 		</classes>
 	</test>
+    <test name="Переход между вкладками" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.tabsPanel">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="tabsPanel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
