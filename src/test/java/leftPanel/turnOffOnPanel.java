@@ -96,6 +96,7 @@ public class turnOffOnPanel extends setUP_local {
         collLeftPanel.get(3).hover().shouldBe(visible);
         collLeftPanel.get(4).hover().shouldBe(visible);
         collLeftPanel.get(0).hover().shouldBe(visible);
+        collLeftPanel.get(2).hover().shouldBe(visible);
 
         System.out.println("открыли sidebar");
         hamburger.shouldBe(visible);
@@ -119,9 +120,10 @@ public class turnOffOnPanel extends setUP_local {
         collLeftPanel.get(4).hover().shouldBe(visible);
         collLeftPanel.get(0).hover().shouldBe(visible);
 
+
         System.out.println("конец теста");
     }
-    @Test(description = "левая панль разворачиваем")
+    @Test(description = "левая панель разворачиваем")
     public void leftPanelTrunOn() {
 
         System.out.println("конец теста");
