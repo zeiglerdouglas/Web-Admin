@@ -85,13 +85,24 @@
 			</class>
 		</classes>
 	</test>
-    <test name="Переход между вкладками" enabled="true">
+    <test name="Переход между вкладками" enabled="false">
         <classes>
             <class name="test.java.leftPanel.tabsPanel">
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
                     <include name="tabsPanel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Доступные меню" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.availabelMenu">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="availabelMenu"/>
                 </methods>
             </class>
         </classes>
