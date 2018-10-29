@@ -96,13 +96,25 @@
             </class>
         </classes>
     </test>
-    <test name="Доступные меню" enabled="true">
+    <test name="Доступные меню" enabled="false">
         <classes>
             <class name="test.java.leftPanel.availabelMenu">
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
                     <include name="availabelMenu"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <!--меню система-->
+    <test name="система - переход по вкладкам" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.systemTabs">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="systemTabs"/>
                 </methods>
             </class>
         </classes>
