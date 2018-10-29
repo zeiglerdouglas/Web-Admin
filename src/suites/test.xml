@@ -119,7 +119,7 @@
             </class>
         </classes>
     </test>
-	<test name="система - сведения о системе - активация" enabled="true">
+	<test name="система - сведения о системе - активация" enabled="false">
 		<classes>
 			<class name="test.java.leftPanel.menuSystema.activation">
 				<methods>
@@ -130,4 +130,15 @@
 			</class>
 		</classes>
 	</test>
+    <test name="система - сведения о системе - центральная форма" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.oSystemCenterForm">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="centerForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
