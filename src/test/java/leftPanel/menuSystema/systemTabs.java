@@ -61,7 +61,12 @@ public class systemTabs extends setUP_local {
     public void systemTabs() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
+        SelenideElement globalCentral = global.$(byClassName("main-container"));
+        SelenideElement globalTabs = globalCentral.$(byClassName("is-top"));
+        globalTabs.is(visible);
 
+        ElementsCollection collSystemTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
+        collSystemTabs.get(1).hover().click();
 
 
         System.out.println("конец теста");
