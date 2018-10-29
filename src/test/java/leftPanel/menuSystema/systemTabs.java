@@ -69,6 +69,7 @@ public class systemTabs extends setUP_local {
         collSystemTabs.get(1).hover().click();
 
 
+
         System.out.println("конец теста");
     }
 
