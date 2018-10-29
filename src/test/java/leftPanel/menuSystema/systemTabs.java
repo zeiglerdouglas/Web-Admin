@@ -19,7 +19,7 @@ public class systemTabs extends setUP_local {
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.32"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.33"));
         System.out.println("проверка фин");
     }
     @Test(description = "проверка титла перед авторизацией")
@@ -66,9 +66,20 @@ public class systemTabs extends setUP_local {
         globalTabs.is(visible);
 
         ElementsCollection collSystemTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
+
+        collSystemTabs.get(1).hover().shouldBe(visible);
+        collSystemTabs.get(2).hover().shouldBe(visible);
+        collSystemTabs.get(3).hover().shouldBe(visible);
+        collSystemTabs.get(4).hover().shouldBe(visible);
+        collSystemTabs.get(5).hover().shouldBe(visible);
+        collSystemTabs.get(0).hover().shouldBe(visible);
+
         collSystemTabs.get(1).hover().click();
-
-
+        collSystemTabs.get(2).hover().click();
+        collSystemTabs.get(3).hover().click();
+        collSystemTabs.get(4).hover().click();
+        collSystemTabs.get(5).hover().click();
+        collSystemTabs.get(0).hover().click();
 
         System.out.println("конец теста");
     }
