@@ -58,31 +58,10 @@ public class activation extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void availabelMenu() {
+    public void activation() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
-        SelenideElement wrapper = global.$(byClassName("app-wrapper"));
-        SelenideElement panelLeft = wrapper.$(byClassName("sidebar-container"));
-        panelLeft.shouldBe(visible.because("находиться слева"));
 
-        System.out.println("собираем в коллекцию элементы");
-        ElementsCollection collLeftPanel = panelLeft.$(byClassName("el-menu")).$$(tagName("a"));
-        collLeftPanel.get(1).shouldBe(visible.because("журналы"));
-        collLeftPanel.get(2).shouldBe(visible.because("консоль"));
-        collLeftPanel.get(3).shouldBe(visible.because("сервис"));
-        collLeftPanel.get(4).shouldBe(visible.because("настройки"));
-        collLeftPanel.get(0).shouldBe(visible.because("система"));
-
-        collLeftPanel.get(1).hover().click();
-        collLeftPanel.get(1).isEnabled();
-        collLeftPanel.get(2).hover().click();
-        collLeftPanel.get(2).isEnabled();
-        collLeftPanel.get(3).hover().click();
-        collLeftPanel.get(3).isEnabled();
-        collLeftPanel.get(4).hover().click();
-        collLeftPanel.get(4).isEnabled();
-        collLeftPanel.get(0).hover().click();
-        collLeftPanel.get(0).isEnabled();
 
 
         System.out.println("конец теста");
