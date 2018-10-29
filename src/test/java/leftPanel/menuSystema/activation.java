@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
@@ -61,8 +62,20 @@ public class activation extends setUP_local {
     public void activation() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
+        SelenideElement globalCentral = global.$(byClassName("main-container"));
+        globalCentral.shouldBe(visible);
 
+        SelenideElement activashionsButton = globalCentral.$(byAttribute("type","button")).$(new By.ByTagName("span"));
+        activashionsButton.shouldBe(visible);
+        activashionsButton.hover().click();
 
+        SelenideElement messageBoxWrapper = $(byClassName("el-message-box__wrapper"));
+        SelenideElement messageBox = messageBoxWrapper.$(byClassName("el-message-box"));
+        messageBox.shouldBe(visible);
+
+        SelenideElement iconClose = messageBox.$(byClassName("el-icon-close"));
+        iconClose.shouldBe(visible);
+        iconClose.hover().click();
 
         System.out.println("конец теста");
     }
