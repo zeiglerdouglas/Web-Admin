@@ -130,13 +130,24 @@
 			</class>
 		</classes>
 	</test>
-    <test name="система - сведения о системе - центральная форма" enabled="true">
+    <test name="система - сведения о системе - центральная форма" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.oSystemCenterForm">
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
                     <include name="centerForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="система - сеть" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.network">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="network"/>
                 </methods>
             </class>
         </classes>
