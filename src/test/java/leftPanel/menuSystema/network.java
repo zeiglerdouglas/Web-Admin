@@ -74,11 +74,11 @@ public class network extends setUP_local {
         System.out.println("определение переменных - внутри вкладки Сеть");
         ElementsCollection collNetwork = tabContainer.$(byClassName("is-scrolling-none")).$$(tagName("td"));
 
-        SelenideElement textIpAdress= collNetwork.get(0).shouldBe(text("IP адрес"));
-        SelenideElement textStatusH323= collNetwork.get(2).shouldBe(text("Статус H.323"));
-        SelenideElement textStatusSIP= collNetwork.get(4).shouldBe(text("Статус SIP"));
-        SelenideElement textStatusCall= collNetwork.get(6).shouldBe(text("Статус звонка"));
-        SelenideElement texteth0= collNetwork.get(8).shouldBe(text("eth0"));
+        SelenideElement textIpAdress= collNetwork.get(0).shouldBe(text("IP адрес")).hover();
+        SelenideElement textStatusH323= collNetwork.get(2).shouldBe(text("Статус H.323")).hover();
+        SelenideElement textStatusSIP= collNetwork.get(4).shouldBe(text("Статус SIP")).hover();
+        SelenideElement textStatusCall= collNetwork.get(6).shouldBe(text("Статус звонка")).hover();
+        SelenideElement texteth0= collNetwork.get(8).shouldBe(text("eth0")).hover();
 
         textIpAdress.getText();
         textStatusH323.getText();
@@ -93,11 +93,11 @@ public class network extends setUP_local {
         System.out.println(texteth0);
 
 
-        SelenideElement textInfoIpAdress = collNetwork.get(1);
-        SelenideElement textInfoStatusH323 = collNetwork.get(3);
-        SelenideElement textInfoStatusSIP = collNetwork.get(5);
-        SelenideElement textInfoStatusCall = collNetwork.get(7);
-        SelenideElement textInfoeth0 = collNetwork.get(9);
+        SelenideElement textInfoIpAdress = collNetwork.get(1).hover();
+        SelenideElement textInfoStatusH323 = collNetwork.get(3).hover();
+        SelenideElement textInfoStatusSIP = collNetwork.get(5).hover();
+        SelenideElement textInfoStatusCall = collNetwork.get(7).hover();
+        SelenideElement textInfoeth0 = collNetwork.get(9).hover();
 
         textInfoIpAdress.getText();
         textInfoStatusH323.getText();
@@ -128,6 +128,5 @@ public class network extends setUP_local {
 
         System.out.println("конец теста");
     }
-
 
 }
