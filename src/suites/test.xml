@@ -152,7 +152,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - сессии" enabled="true">
+    <test name="система - сессии" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.sessions">
                 <methods>
@@ -163,6 +163,16 @@
             </class>
         </classes>
     </test>
-
+    <test name="система - звонки" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.calls">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="calls"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 		</suite>
