@@ -21,7 +21,7 @@ public class verificationUsers extends setUP_local{
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.33"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.34"));
         System.out.println("проверка фин");
     }
     @Test(description = "проверка титла перед авторизацией")

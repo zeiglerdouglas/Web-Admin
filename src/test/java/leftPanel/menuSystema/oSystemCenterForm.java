@@ -20,7 +20,7 @@ public class oSystemCenterForm extends setUP_local {
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.33"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.34"));
         System.out.println("проверка фин");
     }
     @Test(description = "проверка титла перед авторизацией")
@@ -65,17 +65,49 @@ public class oSystemCenterForm extends setUP_local {
         SelenideElement tabContainer = global.$(byClassName("tab-container"));
         tabContainer.shouldBe(visible);
 
-        ElementsCollection collSystemForms = tabContainer.$(byClassName("el-table__body-wrapper")).$$(tagName("tr"));
-        collSystemForms.get(0).is(visible);
-        collSystemForms.get(1).is(visible);
-        collSystemForms.get(2).is(visible);
-        collSystemForms.get(3).is(visible);
-        collSystemForms.get(4).is(visible);
-        collSystemForms.get(5).is(visible);
-        collSystemForms.get(6).is(visible);
-        collSystemForms.get(7).is(visible);
-        collSystemForms.get(8).is(visible);
-        collSystemForms.get(9).is(visible);
+        ElementsCollection collSystemForms = tabContainer.$(byClassName("el-table__body-wrapper")).$$(tagName("div"));
+        SelenideElement textCoreSystem = collSystemForms.get(0).shouldBe(text("Ядро системы"));
+        SelenideElement textModelProcessor = collSystemForms.get(2).shouldBe(text("Модель процессора"));
+        SelenideElement textCoreProcessor = collSystemForms.get(4).shouldBe(text("Ядер процессора"));
+        SelenideElement textAllMemory = collSystemForms.get(6).shouldBe(text("Всего памяти"));
+        SelenideElement textClearMemory = collSystemForms.get(8).shouldBe(text("Свободно памяти"));
+        SelenideElement textMacAdres = collSystemForms.get(10).shouldBe(text("MAC адреса"));
+        SelenideElement textVersionsProg = collSystemForms.get(12).shouldBe(text("Версия П/О"));
+        SelenideElement textStatusActiv = collSystemForms.get(14).shouldBe(text("Состояние активации"));
+        SelenideElement textCapability = collSystemForms.get(16).shouldBe(text("Возможности"));
+        SelenideElement textVersionsAPI = collSystemForms.get(18).shouldBe(text("Версия API"));
+
+        textCoreSystem.getText();
+        textModelProcessor.getText();
+        textCoreProcessor.getText();
+        textAllMemory.getText();
+        textClearMemory.getText();
+        textMacAdres.getText();
+        textVersionsProg.getText();
+        textStatusActiv.getText();
+        textCapability.getText();
+        textVersionsAPI.getText();
+
+        System.out.println(textCoreSystem);
+        System.out.println(textModelProcessor);
+        System.out.println(textCoreProcessor);
+        System.out.println(textAllMemory);
+        System.out.println(textClearMemory);
+        System.out.println(textMacAdres);
+        System.out.println(textVersionsProg);
+        System.out.println(textStatusActiv);
+        System.out.println(textCapability);
+        System.out.println(textVersionsAPI);
+
+
+
+//        SelenideElement textCoreSystem = collSystemForms.get(0).shouldBe(text("Ядро системы"));
+//        textCoreSystem.getText();
+//        System.out.println(textCoreSystem);
+//
+//        SelenideElement textModelProcessor = collSystemForms.get(2).shouldBe(text("Модель процессора"));
+//        textModelProcessor.getText();
+//        System.out.println(textModelProcessor);
 
 
 //        collSystemForms.get(0).find(byText("Ядро системы")).shouldNotBe(visible).hover();
