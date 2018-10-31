@@ -141,7 +141,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - сеть" enabled="true">
+    <test name="система - сеть" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.network">
                 <methods>
@@ -152,4 +152,17 @@
             </class>
         </classes>
     </test>
+    <test name="система - сессии" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.sessions">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="sessions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
 		</suite>
