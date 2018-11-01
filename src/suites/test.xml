@@ -163,7 +163,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - звонки" enabled="true">
+    <test name="система - звонки" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.calls">
                 <methods>
@@ -174,5 +174,15 @@
             </class>
         </classes>
     </test>
-
+    <test name="система - видео файлы" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.videoFiles">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="videoFiles"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
