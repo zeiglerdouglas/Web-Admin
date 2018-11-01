@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
-public class network extends setUP_local {
+public class calls extends setUP_local {
 
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
@@ -59,7 +59,7 @@ public class network extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void network() {
+    public void calls() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -68,64 +68,13 @@ public class network extends setUP_local {
         globalTabs.is(visible);
 
         ElementsCollection collSystemTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
-        collSystemTabs.get(1).hover().shouldBe(text("Сеть"));
-        collSystemTabs.get(1).hover().click();
+        collSystemTabs.get(3).hover().shouldBe(text("Звонки"));
+        collSystemTabs.get(3).hover().click();
 
         System.out.println("определение переменных - внутри вкладки Сеть");
-        ElementsCollection collNetwork = tabContainer.$(byClassName("is-scrolling-none")).$$(tagName("td"));
-
-        SelenideElement textIpAdress= collNetwork.get(0).shouldBe(text("IP адрес")).hover();
-        SelenideElement textStatusH323= collNetwork.get(2).shouldBe(text("Статус H.323")).hover();
-        SelenideElement textStatusSIP= collNetwork.get(4).shouldBe(text("Статус SIP")).hover();
-        SelenideElement textStatusCall= collNetwork.get(6).shouldBe(text("Статус звонка")).hover();
-        SelenideElement texteth0= collNetwork.get(8).shouldBe(text("eth0")).hover();
-
-        textIpAdress.getText();
-        textStatusH323.getText();
-        textStatusSIP.getText();
-        textStatusCall.getText();
-        texteth0.getText();
-
-        System.out.println(textIpAdress);
-        System.out.println(textStatusH323);
-        System.out.println(textStatusSIP);
-        System.out.println(textStatusCall);
-        System.out.println(texteth0);
-
-
-        SelenideElement textInfoIpAdress = collNetwork.get(1).hover();
-        SelenideElement textInfoStatusH323 = collNetwork.get(3).hover();
-        SelenideElement textInfoStatusSIP = collNetwork.get(5).hover();
-        SelenideElement textInfoStatusCall = collNetwork.get(7).hover();
-        SelenideElement textInfoeth0 = collNetwork.get(9).hover();
-
-        textInfoIpAdress.getText();
-        textInfoStatusH323.getText();
-        textInfoStatusSIP.getText();
-        textInfoStatusCall.getText();
-        textInfoeth0.getText();
-
-        System.out.println(textInfoIpAdress);
-        System.out.println(textInfoStatusH323);
-        System.out.println(textInfoStatusSIP);
-        System.out.println(textInfoStatusCall);
-        System.out.println(textInfoeth0);
-
-        System.out.println("собираем кнопочки");
-        ElementsCollection but1 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка сети"));
-        but1.get(0).hover();
-        System.out.println(but1);
-
-        System.out.println("собираем кнопочки");
-        ElementsCollection but2 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка SIP"));
-        but2.get(0).hover();
-        System.out.println(but2);
-
-        System.out.println("собираем кнопочки");
-        ElementsCollection but3 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка H.323"));
-        but3.get(0).hover();
-        System.out.println(but3);
-
+        SelenideElement centrFrame = tabContainer.$(byClassName("el-tabs"));
+        SelenideElement textCentralFrame = centrFrame.find(byText("Нет активных звонков")).hover();
+        System.out.println(textCentralFrame);
         System.out.println("конец теста");
     }
 

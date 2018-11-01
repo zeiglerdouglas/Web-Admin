@@ -141,13 +141,46 @@
             </class>
         </classes>
     </test>
-    <test name="система - сеть" enabled="true">
+    <test name="система - сеть" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.network">
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
                     <include name="network"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="система - сессии" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.sessions">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="sessions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="система - звонки" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.calls">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="calls"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="система - видео файлы" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.videoFiles">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="videoFiles"/>
                 </methods>
             </class>
         </classes>

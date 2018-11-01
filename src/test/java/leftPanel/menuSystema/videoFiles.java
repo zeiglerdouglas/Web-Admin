@@ -8,14 +8,14 @@ import main.java.setUp.setUP_local;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
-public class network extends setUP_local {
+public class videoFiles extends setUP_local {
 
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
@@ -59,7 +59,7 @@ public class network extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void network() {
+    public void videoFiles() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -67,62 +67,48 @@ public class network extends setUP_local {
         SelenideElement tabContainer = global.$(byClassName("tab-container"));
         globalTabs.is(visible);
 
+        System.out.println("переключаемся на Видео файлы");
         ElementsCollection collSystemTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
-        collSystemTabs.get(1).hover().shouldBe(text("Сеть"));
-        collSystemTabs.get(1).hover().click();
+        collSystemTabs.get(5).hover().shouldBe(text("Видео файлы"));
+        collSystemTabs.get(5).hover().click();
 
-        System.out.println("определение переменных - внутри вкладки Сеть");
-        ElementsCollection collNetwork = tabContainer.$(byClassName("is-scrolling-none")).$$(tagName("td"));
+        System.out.println("определение переменных - внутри вкладки Видео файлы");
+        SelenideElement top = tabContainer.$(byClassName("el-tabs--top"));
+        System.out.println(top);
+        top.find(byText("Файл"));
+        top.is(visible);
 
-        SelenideElement textIpAdress= collNetwork.get(0).shouldBe(text("IP адрес")).hover();
-        SelenideElement textStatusH323= collNetwork.get(2).shouldBe(text("Статус H.323")).hover();
-        SelenideElement textStatusSIP= collNetwork.get(4).shouldBe(text("Статус SIP")).hover();
-        SelenideElement textStatusCall= collNetwork.get(6).shouldBe(text("Статус звонка")).hover();
-        SelenideElement texteth0= collNetwork.get(8).shouldBe(text("eth0")).hover();
-
-        textIpAdress.getText();
-        textStatusH323.getText();
-        textStatusSIP.getText();
-        textStatusCall.getText();
-        texteth0.getText();
-
-        System.out.println(textIpAdress);
-        System.out.println(textStatusH323);
-        System.out.println(textStatusSIP);
-        System.out.println(textStatusCall);
-        System.out.println(texteth0);
+        System.out.println("включили галочки глобальной ");
+        SelenideElement header = tabContainer.$(byClassName("el-tabs__content")).lastChild();
+        SelenideElement headerWrapper = header.$(byClassName("el-table--medium"));
+        SelenideElement tableColumn = headerWrapper.$(byClassName("el-table-column--selection"));
+        SelenideElement check = tableColumn.$(byClassName("cell"));
+        SelenideElement checkBox = check.$(byAttribute("role","checkbox"));
+        checkBox.hover().click();
 
 
-        SelenideElement textInfoIpAdress = collNetwork.get(1).hover();
-        SelenideElement textInfoStatusH323 = collNetwork.get(3).hover();
-        SelenideElement textInfoStatusSIP = collNetwork.get(5).hover();
-        SelenideElement textInfoStatusCall = collNetwork.get(7).hover();
-        SelenideElement textInfoeth0 = collNetwork.get(9).hover();
+        System.out.println("выключаем включенные галочки ");
+        ElementsCollection collNetwork = tabContainer.$(byClassName("is-scrolling-none")).$$(tagName("tr"));
+        collNetwork.get(0).find(byClassName("el-table-column--selection")).hover().click();
+        collNetwork.get(1).find(byClassName("el-table-column--selection")).hover().click();
+        collNetwork.get(2).find(byClassName("el-table-column--selection")).hover().click();
+        System.out.println(collNetwork.get(0));
+        System.out.println(collNetwork.get(1));
+        System.out.println(collNetwork.get(2));
 
-        textInfoIpAdress.getText();
-        textInfoStatusH323.getText();
-        textInfoStatusSIP.getText();
-        textInfoStatusCall.getText();
-        textInfoeth0.getText();
-
-        System.out.println(textInfoIpAdress);
-        System.out.println(textInfoStatusH323);
-        System.out.println(textInfoStatusSIP);
-        System.out.println(textInfoStatusCall);
-        System.out.println(textInfoeth0);
 
         System.out.println("собираем кнопочки");
-        ElementsCollection but1 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка сети"));
+        ElementsCollection but1 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Обновить"));
         but1.get(0).hover();
         System.out.println(but1);
 
         System.out.println("собираем кнопочки");
-        ElementsCollection but2 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка SIP"));
+        ElementsCollection but2 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Удалить"));
         but2.get(0).hover();
         System.out.println(but2);
 
         System.out.println("собираем кнопочки");
-        ElementsCollection but3 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка H.323"));
+        ElementsCollection but3 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Добавить"));
         but3.get(0).hover();
         System.out.println(but3);
 
