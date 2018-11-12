@@ -9,12 +9,12 @@ import main.java.setUp.setUP_local;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Condition.disappear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.getElement;
+import static com.codeborne.selenide.Selenide.sleep;
+import static org.junit.Assert.assertFalse;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
@@ -94,6 +94,72 @@ public class codecs extends setUP_local {
         but2.get(0).hover();
         assertTrue(but2.get(0).is(visible));
         System.out.println(but2);
+
+
+        System.out.println("открываем аудио кодеки");
+        but1.get(0).hover().click();
+        System.out.println("определение формы аудио кодека");
+        SelenideElement audioCodecForms = $(byAttribute("aria-label","Аудио кодеки"));
+        assertTrue(audioCodecForms.is(visible));
+        System.out.println("закрытие формы аудио кодека ");
+        SelenideElement clouseX = audioCodecForms.$(byAttribute("aria-label","Close"));
+        clouseX.hover().click();
+        assertFalse(audioCodecForms.is(disappears));
+        System.out.println("открываем аудио кодеки");
+        but1.get(0).hover().click();
+
+        System.out.println("!Отключаем все кодеки!");
+        SelenideElement activ = audioCodecForms.$(byText("Активные"));
+        activ.shouldBe(visible).hover().click();
+        SelenideElement checkActivNumbers = audioCodecForms.$(byText("16/16"));
+        assertTrue(checkActivNumbers.is(visible));
+        checkActivNumbers.shouldBe(visible).hover().getText();
+        System.out.println(checkActivNumbers);
+        System.out.println("выбраны 16 из 16 кодеков");
+
+        System.out.println("нажимаем на кнопку переноса в Отключенные кодеки");
+        SelenideElement buttonRight = audioCodecForms.$(byClassName("el-icon-arrow-right"));
+        assertTrue(buttonRight.is(visible));
+        buttonRight.hover().click();
+        System.out.println("проверяем наличие перенесения кодеков");
+        ElementsCollection activOtkluch = audioCodecForms.$$(byClassName("el-transfer-panel"));
+        activOtkluch.get(1).getText();
+        System.out.println(activOtkluch);
+        SelenideElement Otkluch = audioCodecForms.$(byText("Отключенные"));
+        Otkluch.shouldBe(visible).hover().click();
+//        SelenideElement checkOtkluch = activOtkluch.get(1).$(byText("Отключенные"));
+//        checkOtkluch.hover().click();
+        SelenideElement checkOtkluchNumbers = activOtkluch.get(1).$(byText("16/16"));
+        checkOtkluchNumbers.hover().getText();
+        System.out.println(checkOtkluchNumbers);
+
+        System.out.println("нажимаем кнопку применить");
+        SelenideElement buttonAccept = audioCodecForms.$(byText("Применить"));
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("определяем форму применения настроек");
+        SelenideElement acceptForms = $(byClassName("el-message-box"));
+        acceptForms.shouldBe(visible).hover();
+        acceptForms.find(byText("Применить изменения?")).shouldBe(visible);
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible);
+        System.out.println("нажать на кнопку Отмена - закрытия формы подтверждения");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("Отмена")).hover().click();
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку Х - закрытия формы подтверждения");
+        acceptForms.find(byAttribute("aria-label","Close")).hover().click();
+
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку ОК");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("OK")).hover().click();
+
+        System.out.println("убедились - окно закрылось");
+        assertFalse(acceptForms.is(disappears));
 
         System.out.println("конец теста");
     }

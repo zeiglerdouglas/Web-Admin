@@ -3,7 +3,7 @@
 
 	<suite name="Tests" verbose="1" >
 
-	<test name="проверка открытия нужной нам страницы" enabled="true">
+	<test name="проверка открытия нужной нам страницы" enabled="false">
 		<classes>
 			<class name="test.java.autorisations.autorisation">
 				<methods>
@@ -12,7 +12,7 @@
 			</class>
 		</classes>
 	</test>
-    <test name="Успешная авторизация" enabled="true">
+    <test name="Успешная авторизация" enabled="false">
         <classes>
             <class name="test.java.autorisations.formsAutorisations.passAutorisation">
                 <methods>
@@ -22,7 +22,7 @@
             </class>
         </classes>
     </test>
-	<test name="Ошибка авторизации" enabled="true">
+	<test name="Ошибка авторизации" enabled="false">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.failAutorisation">
 				<methods>
@@ -32,7 +32,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Смена языка" enabled="true">
+	<test name="Смена языка" enabled="false">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.switchLanguage">
 				<methods>
@@ -42,7 +42,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Подсказки полей" enabled="true">
+	<test name="Подсказки полей" enabled="false">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.cluePlace">
 				<methods>
@@ -52,7 +52,7 @@
 			</class>
 		</classes>
 	</test>
-	<test name="Валидация полей" enabled="true">
+	<test name="Валидация полей" enabled="false">
 		<classes>
 			<class name="test.java.autorisations.formsAutorisations.validationPlace">
 				<methods>
@@ -62,7 +62,7 @@
 			</class>
 		</classes>
 	</test>
-    <test name="Верификация пользователя" enabled="true">
+    <test name="Верификация пользователя" enabled="false">
         <classes>
             <class name="test.java.autorisations.formsAutorisations.verificationUsers">
                 <methods>
@@ -73,7 +73,7 @@
         </classes>
     </test>
 	<!--левая панель-->
-	<test name="Сворачивание/Разворачивание панели" enabled="true">
+	<test name="Сворачивание/Разворачивание панели" enabled="false">
 		<classes>
 			<class name="test.java.leftPanel.turnOffOnPanel">
 				<methods>
@@ -85,7 +85,7 @@
 			</class>
 		</classes>
 	</test>
-    <test name="Переход между вкладками" enabled="true">
+    <test name="Переход между вкладками" enabled="false">
         <classes>
             <class name="test.java.leftPanel.tabsPanel">
                 <methods>
@@ -96,7 +96,7 @@
             </class>
         </classes>
     </test>
-    <test name="Доступные меню" enabled="true">
+    <test name="Доступные меню" enabled="false">
         <classes>
             <class name="test.java.leftPanel.availabelMenu">
                 <methods>
@@ -108,7 +108,7 @@
         </classes>
     </test>
     <!--меню система-->
-    <test name="система - переход по вкладкам" enabled="true">
+    <test name="система - переход по вкладкам" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.systemTabs">
                 <methods>
@@ -119,7 +119,7 @@
             </class>
         </classes>
     </test>
-	<test name="система - сведения о системе - активация" enabled="true">
+	<test name="система - сведения о системе - активация" enabled="false">
 		<classes>
 			<class name="test.java.leftPanel.menuSystema.activation">
 				<methods>
@@ -130,7 +130,7 @@
 			</class>
 		</classes>
 	</test>
-    <test name="система - сведения о системе - центральная форма" enabled="true">
+    <test name="система - сведения о системе - центральная форма" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.oSystemCenterForm">
                 <methods>
@@ -141,7 +141,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - сеть" enabled="true">
+    <test name="система - сеть" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.network">
                 <methods>
@@ -152,7 +152,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - сессии" enabled="true">
+    <test name="система - сессии" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.sessions">
                 <methods>
@@ -163,7 +163,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - звонки" enabled="true">
+    <test name="система - звонки" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.calls">
                 <methods>
@@ -174,7 +174,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - видео файлы" enabled="true">
+    <test name="система - видео файлы" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.videoFiles">
                 <methods>
