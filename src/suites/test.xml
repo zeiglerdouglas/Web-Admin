@@ -191,7 +191,8 @@
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
-                    <include name="codecs"/>
+                    <include name="codecsAudio"/>
+                    <include name="codecsVideo"/>
                 </methods>
             </class>
         </classes>

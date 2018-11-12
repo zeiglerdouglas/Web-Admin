@@ -62,7 +62,7 @@ public class codecs extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void codecs() {
+    public void codecsAudio() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -95,7 +95,7 @@ public class codecs extends setUP_local {
         assertTrue(but2.get(0).is(visible));
         System.out.println(but2);
 
-
+//-- открываем форму аудио кодеков и отключаем --
         System.out.println("открываем аудио кодеки");
         but1.get(0).hover().click();
         System.out.println("определение формы аудио кодека");
@@ -161,7 +161,80 @@ public class codecs extends setUP_local {
         System.out.println("убедились - окно закрылось");
         assertFalse(acceptForms.is(disappears));
 
+        System.out.println("проверка push");
+        SelenideElement checkPushRUS = $(byAttribute("role","alert"));
+        checkPushRUS.findElements(byText("Изменения применены"));
+        SelenideElement pushHidden = $(byAttribute("role","alert"));
+        pushHidden.waitUntil(hidden,10000);
+
+        System.out.println("проверка в общей таблице сообщения - аудио кадека - аудио кодеков нету");
+        row.get(0).find(byText("нет активных кодеков")).shouldBe(visible).hover();
+
+        //-- открываем форму аудио кодеков и Включаем все выключенные --
+
+        System.out.println("открываем аудио кодеки");
+        but1.get(0).hover().click();
+
+        System.out.println("!Включаем все кодеки!");
+        System.out.println("нажимаем на Отключенные");
+        Otkluch.shouldBe(visible).hover().click();
+//        SelenideElement checkOtkluch = activOtkluch.get(1).$(byText("Отключенные"));
+//        checkOtkluch.hover().click();
+
+        System.out.println("проверяем количество выбранных кодеков");
+        activOtkluch.get(1).$(byText("16/16"));
+        checkOtkluchNumbers.hover().getText();
+        System.out.println(checkOtkluchNumbers);
+
+        System.out.println("нажимаем на кнопку переноса в Отключенные кодеки");
+        SelenideElement buttonLeft = audioCodecForms.$(byClassName("el-icon-arrow-left"));
+        assertTrue(buttonLeft.is(visible));
+        buttonLeft.hover().click();
+
+        System.out.println("выбираем и проверяем 16 аудио кодеков после переноса ");
+        activ.shouldBe(visible).hover().click();
+        SelenideElement checkActivNumbers16 = audioCodecForms.$(byText("16/16"));
+        assertTrue(checkActivNumbers16.is(visible));
+        checkActivNumbers16.shouldBe(visible).hover().getText();
+        System.out.println(checkActivNumbers16);
+        System.out.println("выбраны 16 из 16 кодеков");
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку Х - закрытия формы подтверждения");
+        acceptForms.find(byAttribute("aria-label","Close")).hover().click();
+
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку ОК");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("OK")).hover().click();
+
+        System.out.println("убедились - окно закрылось");
+        assertFalse(acceptForms.is(disappears));
+
+        System.out.println("проверка push");
+        SelenideElement checkPushAccept = $(byAttribute("role","alert"));
+        checkPushAccept.findElements(byText("Изменения применены"));
+        SelenideElement pushHiddenAccept = $(byAttribute("role","alert"));
+        pushHiddenAccept.waitUntil(hidden,10000);
+
+        System.out.println("проверка в общей таблице сообщения - аудио кадека - аудио кодеки есть");
+
+        String rowCodecs = "G7221, OPUS, Speex, G722, PCMA, PCMU, G726, G728, G729, gsm, ms-gsm, iLBC, isac, lpc10, AMR, AMR-WB";
+        String rowText = row.get(0).find(byText("G7221, OPUS, Speex, G722, PCMA, PCMU, G726, G728, G729, gsm, ms-gsm, iLBC, isac, lpc10, AMR, AMR-WB")).shouldBe(visible).text();
+        boolean eq = rowText.equals(rowCodecs);
+        System.out.println(eq);
+        assertTrue(eq);
+
         System.out.println("конец теста");
     }
 
+    @Test(description = "вкл / выкл видео кодеков")
+    public void codecsVideo() {
+
+
+    }
 }
