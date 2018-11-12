@@ -234,7 +234,165 @@ public class codecs extends setUP_local {
 
     @Test(description = "вкл / выкл видео кодеков")
     public void codecsVideo() {
+        System.out.println("определение переменных");
+        SelenideElement global = $(byId("app"));
+        SelenideElement globalCentral = global.$(byClassName("main-container"));
+        SelenideElement globalTabs = globalCentral.$(byClassName("is-top"));
+        SelenideElement tabContainer = global.$(byClassName("tab-container"));
+        globalTabs.is(visible);
+
+        System.out.println("переключаемся на Кодеки");
+        ElementsCollection collSystemTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
+        collSystemTabs.get(4).hover().shouldBe(text("Кодеки"));
+        collSystemTabs.get(4).hover().click();
+
+        System.out.println("определение переменных - внутри вкладки Кодеки");
+        SelenideElement top = tabContainer.$(byClassName("el-tabs__content"));
+        ElementsCollection row = top.$$(byClassName("is-scrolling-none"));
+        row.get(0).shouldBe(visible).getText();
+        assertTrue(row.get(0).is(visible));
+        System.out.println(row);
+
+        System.out.println("собираем кнопочки");
+        ElementsCollection but2 = global.$(byClassName("el-tabs__content")).$$(byAttribute("type","button")).filterBy(text("Настройка видео кодеков"));
+        but2.get(0).hover();
+        assertTrue(but2.get(0).is(visible));
+        System.out.println(but2);
+
+//-- открываем форму видео кодеков и отключаем --
+        System.out.println("открываем видео кодеки");
+        but2.get(0).hover().click();
+        System.out.println("определение формы видео кодека");
+        SelenideElement audioCodecForms = $(byAttribute("aria-label","Видео кодеки"));
+        assertTrue(audioCodecForms.is(visible));
+        System.out.println("закрытие формы аудио кодека ");
+        SelenideElement clouseX = audioCodecForms.$(byAttribute("aria-label","Close"));
+        clouseX.hover().click();
+        assertFalse(audioCodecForms.is(disappears));
+
+        System.out.println("открываем видео кодеки");
+        but2.get(0).hover().click();
+
+//
+        System.out.println("!Отключаем все кодеки!");
+        SelenideElement activ = audioCodecForms.$(byText("Активные"));
+        activ.shouldBe(visible).hover().click();
+        SelenideElement checkActivNumbers = audioCodecForms.$(byText("10/10"));
+        assertTrue(checkActivNumbers.is(visible));
+        checkActivNumbers.shouldBe(visible).hover().getText();
+        System.out.println(checkActivNumbers);
+        System.out.println("выбраны 10 из 10 кодеков");
+
+        System.out.println("нажимаем на кнопку переноса в Отключенные кодеки");
+        SelenideElement buttonRight = audioCodecForms.$(byClassName("el-icon-arrow-right"));
+        assertTrue(buttonRight.is(visible));
+        buttonRight.hover().click();
+        System.out.println("проверяем наличие перенесения кодеков");
+        ElementsCollection activOtkluch = audioCodecForms.$$(byClassName("el-transfer-panel"));
+        activOtkluch.get(1).getText();
+        System.out.println(activOtkluch);
+        SelenideElement Otkluch = audioCodecForms.$(byText("Отключенные"));
+        Otkluch.shouldBe(visible).hover().click();
+//        SelenideElement checkOtkluch = activOtkluch.get(1).$(byText("Отключенные"));
+//        checkOtkluch.hover().click();
+        SelenideElement checkOtkluchNumbers = activOtkluch.get(1).$(byText("10/10"));
+        checkOtkluchNumbers.hover().getText();
+        System.out.println(checkOtkluchNumbers);
+
+        System.out.println("нажимаем кнопку применить");
+        SelenideElement buttonAccept = audioCodecForms.$(byText("Применить"));
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("определяем форму применения настроек");
+        SelenideElement acceptForms = $(byClassName("el-message-box"));
+        acceptForms.shouldBe(visible).hover();
+        acceptForms.find(byText("Применить изменения?")).shouldBe(visible);
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible);
+        System.out.println("нажать на кнопку Отмена - закрытия формы подтверждения");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("Отмена")).hover().click();
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку Х - закрытия формы подтверждения");
+        acceptForms.find(byAttribute("aria-label","Close")).hover().click();
 
 
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку ОК");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("OK")).hover().click();
+
+        System.out.println("убедились - окно закрылось");
+        assertFalse(acceptForms.is(disappears));
+
+        System.out.println("проверка push");
+        SelenideElement checkPushRUS = $(byAttribute("role","alert"));
+        checkPushRUS.findElements(byText("Изменения применены"));
+        SelenideElement pushHidden = $(byAttribute("role","alert"));
+        pushHidden.waitUntil(hidden,10000);
+
+        System.out.println("проверка в общей таблице сообщения - аудио кадека - аудио кодеков нету");
+        row.get(0).find(byText("нет активных кодеков")).shouldBe(visible).hover();
+
+        //-- открываем форму видео кодеков и Включаем все выключенные --
+
+        System.out.println("открываем видео кодеки");
+        but2.get(0).hover().click();
+
+        System.out.println("!Включаем все кодеки!");
+        System.out.println("нажимаем на Отключенные");
+        Otkluch.shouldBe(visible).hover().click();
+//        SelenideElement checkOtkluch = activOtkluch.get(1).$(byText("Отключенные"));
+//        checkOtkluch.hover().click();
+
+        System.out.println("проверяем количество выбранных кодеков");
+        activOtkluch.get(1).$(byText("10/10"));
+        checkOtkluchNumbers.hover().getText();
+        System.out.println(checkOtkluchNumbers);
+
+        System.out.println("нажимаем на кнопку переноса в Отключенные кодеки");
+        SelenideElement buttonLeft = audioCodecForms.$(byClassName("el-icon-arrow-left"));
+        assertTrue(buttonLeft.is(visible));
+        buttonLeft.hover().click();
+
+        System.out.println("выбираем и проверяем 10 аудио кодеков после переноса ");
+        activ.shouldBe(visible).hover().click();
+        SelenideElement checkActivNumbers10 = audioCodecForms.$(byText("10/10"));
+        assertTrue(checkActivNumbers10.is(visible));
+        checkActivNumbers10.shouldBe(visible).hover().getText();
+        System.out.println(checkActivNumbers10);
+        System.out.println("выбраны 10 из 10 кодеков");
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку Х - закрытия формы подтверждения");
+        acceptForms.find(byAttribute("aria-label","Close")).hover().click();
+
+
+        System.out.println("нажимаем кнопку применить");
+        buttonAccept.shouldBe(visible).hover().click();
+
+        System.out.println("нажать на кнопку ОК");
+        acceptForms.find(byClassName("el-message-box__btns")).shouldBe(visible).find(byText("OK")).hover().click();
+
+        System.out.println("убедились - окно закрылось");
+        assertFalse(acceptForms.is(disappears));
+
+        System.out.println("проверка push");
+        SelenideElement checkPushAccept = $(byAttribute("role","alert"));
+        checkPushAccept.findElements(byText("Изменения применены"));
+        SelenideElement pushHiddenAccept = $(byAttribute("role","alert"));
+        pushHiddenAccept.waitUntil(hidden,10000);
+//
+        String rowCodecs = "H264, VP8, H265, H263-1998, H263, H261, MP4V-ES, theora, raw, X-MX-VP8";
+        String rowText = row.get(0).find(byText("H264, VP8, H265, H263-1998, H263, H261, MP4V-ES, theora, raw, X-MX-VP8")).shouldBe(visible).text();
+        boolean eq = rowText.equals(rowCodecs);
+        System.out.println(eq);
+        assertTrue(eq);
+//
+        System.out.println("конец теста");
     }
 }
