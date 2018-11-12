@@ -174,7 +174,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - видео файлы" enabled="true">
+    <test name="система - видео файлы" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.videoFiles">
                 <methods>
@@ -185,5 +185,16 @@
             </class>
         </classes>
     </test>
-
+    <test name="система - Кодеки" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.codecs">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="codecsAudio"/>
+                    <include name="codecsVideo"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
