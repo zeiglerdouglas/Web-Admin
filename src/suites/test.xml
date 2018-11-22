@@ -198,13 +198,24 @@
         </classes>
     </test>
     <!--Журналы-->
-    <test name="Журналы - подМеню" enabled="true">
+    <test name="Журналы - подМеню" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.subMenu">
                 <methods>
                     <include name="title"/>
                     <include name="autorizations"/>
                     <include name="subMenu"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Журналы - фильтр" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.filterCalendar">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="filter"/>
                 </methods>
             </class>
         </classes>

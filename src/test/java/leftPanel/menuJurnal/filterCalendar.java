@@ -8,13 +8,15 @@ import main.java.setUp.setUP_local;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import static com.codeborne.selenide.Condition.hidden;
+import static com.codeborne.selenide.Condition.selected;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
-public class filter extends setUP_local {
+public class filterCalendar extends setUP_local {
 
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
@@ -58,7 +60,7 @@ public class filter extends setUP_local {
         System.out.println("конец теста");
     }
     @Test(description = "левая панель сворачиваем")
-    public void subMenu() {
+    public void filter() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -72,27 +74,45 @@ public class filter extends setUP_local {
         collLeftPanel.get(1).shouldBe(visible.because("журналы"));
         collLeftPanel.get(1).hover().click();
 
-        System.out.println("собираем коллецию подМеню");
-        ElementsCollection colljurnalTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
-        System.out.println(colljurnalTabs.get(0).getText());
-        System.out.println(colljurnalTabs.get(1).getText());
-        System.out.println(colljurnalTabs.get(2).getText());
-        System.out.println(colljurnalTabs.get(3).getText());
-        System.out.println(colljurnalTabs.get(4).getText());
-        System.out.println(colljurnalTabs.get(5).getText());
-        System.out.println(colljurnalTabs.get(6).getText());
-        System.out.println(colljurnalTabs.get(7).getText());
+        System.out.println("определяем сам фильтр - вызов");
+        SelenideElement filterSmall = globalCentral.$(byClassName("filter-container"));
+        SelenideElement filterSmallEditor = filterSmall.$(byClassName("el-date-editor"));
+        filterSmallEditor.is(visible);
+        filterSmallEditor.shouldBe(visible);
+        filterSmallEditor.hover().click();
 
-        System.out.println("прокликиваем по пунктам подМеню");
-        colljurnalTabs.get(1).hover().click();
-        colljurnalTabs.get(2).hover().click();
-        colljurnalTabs.get(3).hover().click();
-        colljurnalTabs.get(4).hover().click();
-        colljurnalTabs.get(5).hover().click();
-        colljurnalTabs.get(6).hover().click();
-        colljurnalTabs.get(7).hover().click();
+        System.out.println("определяем переменные фильтра");
+        SelenideElement filterBig = $(byClassName("has-time"));
+        filterBig.is(visible);
 
-        colljurnalTabs.get(0).hover().click();
+        System.out.println("определяем переменные фильтра - time-header");
+        SelenideElement timeHeader = filterBig.$(byClassName("el-date-range-picker__time-header"));
+        timeHeader.is(visible);
+
+        System.out.println("определяем переменные фильтра - body-wrapper");
+        SelenideElement bodyWrapper = filterBig.$(byClassName("el-picker-panel__body-wrapper"));
+        bodyWrapper.is(visible);
+
+            System.out.println("определяем переменные фильтра - sidebar - сегодня / сутки ");
+            SelenideElement sidebar = bodyWrapper.$(byClassName("el-picker-panel__sidebar"));
+            sidebar.is(visible);
+
+            System.out.println("определяем переменные фильтра - body - календарик");
+            SelenideElement bodyCallender = bodyWrapper.$(byClassName("el-picker-panel__body"));
+            bodyCallender.is(visible);
+
+                System.out.println("определяем переменные фильтра - body - календарик - isLeft панель");
+                SelenideElement isLeft = bodyCallender.$(byClassName("is-left"));
+                isLeft.is(visible);
+
+                System.out.println("определяем переменные фильтра - body - календарик - isRight панель");
+                SelenideElement isRight = bodyCallender.$(byClassName("is-right"));
+                isRight.is(visible);
+
+        System.out.println("определяем переменные фильтра - panel__footer - Очистить - ОК");
+        SelenideElement footer = filterBig.$(byClassName("el-picker-panel__footer"));
+        footer.is(visible);
+
 
         System.out.println("конец теста");
     }
