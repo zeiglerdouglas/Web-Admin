@@ -185,7 +185,7 @@
             </class>
         </classes>
     </test>
-    <test name="система - Кодеки" enabled="true">
+    <test name="система - Кодеки" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.codecs">
                 <methods>
@@ -197,5 +197,38 @@
             </class>
         </classes>
     </test>
-
+    <!--Журналы-->
+    <test name="Журналы - подМеню" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.subMenu">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="subMenu"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Журналы - фильтр" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.filterCalendar">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="filter"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Журналы - Количество строк на страницу" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.inPageLine">
+                <methods>
+                    <include name="title"/>
+                    <include name="autorizations"/>
+                    <include name="pageLine"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 		</suite>
