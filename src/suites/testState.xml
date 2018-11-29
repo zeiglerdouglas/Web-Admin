@@ -1,17 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-	<suite name="Tests" verbose="1" >
+	<suite name="stateTest" verbose="1" >
 
-	<test name="проверка открытия нужной нам страницы" enabled="false">
+	<test name="проверка открытия страницы авторизация титла" enabled="false">
 		<classes>
-			<class name="test.java.autorisations.title">
+			<class name="test.java.autorisations.init.autorisations_init">
 				<methods>
-					<include name="title"/>
+					<include name="title_autorisations"/>
 				</methods>
 			</class>
 		</classes>
 	</test>
+
+    <test name="проверка авторизации - подсказки на странице авторизации " enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.cluePlace_init">
+                <methods>
+                    <include name="cluePlace"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="проверка авторизации - положительная" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.passAutorisation_init">
+                <methods>
+                    <include name="passAutorisation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - отрицательная" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.failAutorisation_init">
+                <methods>
+                    <include name="failAutorisation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - валидация" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.validationPlace_init">
+                <methods>
+                    <include name="validationsPlace"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - верификация" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.verificationUsers_init">
+                <methods>
+                    <include name="verificationUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - смена языка ENG/RUS" enabled="true">
+        <classes>
+            <class name="test.java.autorisations.init.switchLanguage_init">
+                <methods>
+                    <include name="switchLanguage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+<!---->
     <test name="Успешная авторизация" enabled="false">
         <classes>
             <class name="test.java.autorisations.formsAutorisations.passAutorisation">
@@ -220,7 +279,7 @@
             </class>
         </classes>
     </test>
-    <test name="Журналы - Количество строк на страницу" enabled="true">
+    <test name="Журналы - Количество строк на страницу" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.inPageLine">
                 <methods>
@@ -231,5 +290,4 @@
             </class>
         </classes>
     </test>
-
 		</suite>
