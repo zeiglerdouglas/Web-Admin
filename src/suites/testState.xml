@@ -3,9 +3,9 @@
 
 	<suite name="stateTest" verbose="1" >
 
-	<test name="проверка открытия страницы авторизация титла" enabled="true">
+	<test name="проверка открытия страницы авторизация титла" enabled="false">
 		<classes>
-			<class name="test.java.autorisations.autorisations_init">
+			<class name="test.java.autorisations.init.autorisations_init">
 				<methods>
 					<include name="title_autorisations"/>
 				</methods>
@@ -13,7 +13,64 @@
 		</classes>
 	</test>
 
+    <test name="проверка авторизации - подсказки на странице авторизации " enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.cluePlace_init">
+                <methods>
+                    <include name="cluePlace"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
+    <test name="проверка авторизации - положительная" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.passAutorisation_init">
+                <methods>
+                    <include name="passAutorisation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - отрицательная" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.failAutorisation_init">
+                <methods>
+                    <include name="failAutorisation"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - валидация" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.validationPlace_init">
+                <methods>
+                    <include name="validationsPlace"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - верификация" enabled="false">
+        <classes>
+            <class name="test.java.autorisations.init.verificationUsers_init">
+                <methods>
+                    <include name="verificationUsers"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="проверка авторизации - смена языка ENG/RUS" enabled="true">
+        <classes>
+            <class name="test.java.autorisations.init.switchLanguage_init">
+                <methods>
+                    <include name="switchLanguage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+<!---->
     <test name="Успешная авторизация" enabled="false">
         <classes>
             <class name="test.java.autorisations.formsAutorisations.passAutorisation">
