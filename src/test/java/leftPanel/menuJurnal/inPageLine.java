@@ -122,6 +122,14 @@ public class inPageLine extends setUP_local {
         System.out.println("Собираем в коллецию");
         ElementsCollection collPageDropDown = dropDown.$(byClassName("el-select-dropdown__list")).$$(tagName("li"));
         System.out.println(collPageDropDown);
+        collPageDropDown.get(0).hover().find(byText("5 на странице"));
+        collPageDropDown.get(1).hover().find(byText("10 на странице"));
+        collPageDropDown.get(2).hover().find(byText("15 на странице"));
+        collPageDropDown.get(3).hover().find(byText("20 на странице"));
+        collPageDropDown.get(4).hover().find(byText("25 на странице"));
+        collPageDropDown.get(5).hover().find(byText("30 на странице"));
+        collPageDropDown.get(5).hover().find(byText("35 на странице"));
+
 
 
         System.out.println("переход по страницам с помощью стрелок");
