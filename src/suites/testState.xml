@@ -70,7 +70,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - наличие леавого меню" enabled="true">
+    <test name="проверка Левое Меню - наличие леавого меню" enabled="false">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.availabelMenu_init">
                 <methods>
@@ -80,7 +80,15 @@
         </classes>
     </test>
 
-
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.leftPanelMain.init.tabsPanel_init">
+                <methods>
+                    <include name="tabsPanel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
 
