@@ -59,7 +59,8 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - смена языка ENG/RUS" enabled="true">
+
+    <test name="проверка авторизации - смена языка ENG/RUS" enabled="false">
         <classes>
             <class name="test.java.autorisations.init.switchLanguage_init">
                 <methods>
@@ -68,6 +69,20 @@
             </class>
         </classes>
     </test>
+
+    <test name="проверка Левое Меню - наличие леавого меню" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.leftPanelMain.init.availabelMenu_init">
+                <methods>
+                    <include name="availableMenu"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
 
 
 <!---->
