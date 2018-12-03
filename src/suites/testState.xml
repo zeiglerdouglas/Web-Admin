@@ -80,7 +80,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="false">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.tabsPanel_init">
                 <methods>
@@ -89,6 +89,20 @@
             </class>
         </classes>
     </test>
+
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.leftPanelMain.init.turnOffOnPanel_init">
+                <methods>
+                    <include name="turnOffOnPanel"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
 
 
 
