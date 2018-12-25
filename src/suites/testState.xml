@@ -101,7 +101,7 @@
     </test>
 
 
-    <test name="меню Система - переход по вкладкам" enabled="true">
+    <test name="меню Система - переход по вкладкам" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.systemTabs_init">
                 <methods>
@@ -110,6 +110,20 @@
             </class>
         </classes>
     </test>
+    <test name="меню Система - Сведенья о системе" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.oSystemCenterForm_init">
+                <methods>
+                    <include name="oSystemCenterForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+
 
 
 
