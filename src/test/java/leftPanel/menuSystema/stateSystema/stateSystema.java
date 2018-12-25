@@ -97,7 +97,7 @@ public class stateSystema extends setUP_local{
         System.out.println(textCentralFrame);
         System.out.println("конец теста");
     }
-    public void codecsAudio() {
+    public static void codecsAudio() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -146,11 +146,11 @@ public class stateSystema extends setUP_local{
         System.out.println("!Отключаем все кодеки!");
         SelenideElement activ = audioCodecForms.$(byText("Активные"));
         activ.shouldBe(visible).hover().click();
-        SelenideElement checkActivNumbers = audioCodecForms.$(byText("16/16"));
+        SelenideElement checkActivNumbers = audioCodecForms.$(byText("9/9"));
         assertTrue(checkActivNumbers.is(visible));
         checkActivNumbers.shouldBe(visible).hover().getText();
         System.out.println(checkActivNumbers);
-        System.out.println("выбраны 16 из 16 кодеков");
+        System.out.println("выбраны 9 из 9 кодеков");
 
         System.out.println("нажимаем на кнопку переноса в Отключенные кодеки");
         SelenideElement buttonRight = audioCodecForms.$(byClassName("el-icon-arrow-right"));
@@ -164,7 +164,7 @@ public class stateSystema extends setUP_local{
         Otkluch.shouldBe(visible).hover().click();
 //        SelenideElement checkOtkluch = activOtkluch.get(1).$(byText("Отключенные"));
 //        checkOtkluch.hover().click();
-        SelenideElement checkOtkluchNumbers = activOtkluch.get(1).$(byText("16/16"));
+        SelenideElement checkOtkluchNumbers = activOtkluch.get(1).$(byText("9/9"));
         checkOtkluchNumbers.hover().getText();
         System.out.println(checkOtkluchNumbers);
 
@@ -226,13 +226,13 @@ public class stateSystema extends setUP_local{
         assertTrue(buttonLeft.is(visible));
         buttonLeft.hover().click();
 
-        System.out.println("выбираем и проверяем 16 аудио кодеков после переноса ");
+        System.out.println("выбираем и проверяем 9 аудио кодеков после переноса ");
         activ.shouldBe(visible).hover().click();
-        SelenideElement checkActivNumbers16 = audioCodecForms.$(byText("16/16"));
+        SelenideElement checkActivNumbers16 = audioCodecForms.$(byText("9/9"));
         assertTrue(checkActivNumbers16.is(visible));
         checkActivNumbers16.shouldBe(visible).hover().getText();
         System.out.println(checkActivNumbers16);
-        System.out.println("выбраны 16 из 16 кодеков");
+        System.out.println("выбраны 9 из 9 кодеков");
 
         System.out.println("нажимаем кнопку применить");
         buttonAccept.shouldBe(visible).hover().click();
@@ -266,7 +266,7 @@ public class stateSystema extends setUP_local{
 
         System.out.println("конец теста");
     }
-    public void codecsVideo() {
+    public static void codecsVideo() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
