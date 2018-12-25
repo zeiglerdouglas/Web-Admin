@@ -110,7 +110,7 @@
             </class>
         </classes>
     </test>
-    <test name="меню Система - Сведенья о системе" enabled="true">
+    <test name="меню Система - Сведенья о системе" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.oSystemCenterForm_init">
                 <methods>
@@ -120,7 +120,15 @@
         </classes>
     </test>
 
-
+    <test name="меню Система - Сеть" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.network_init">
+                <methods>
+                    <include name="network"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
 
