@@ -120,7 +120,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Сеть" enabled="true">
+    <test name="меню Система - Сеть" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.network_init">
                 <methods>
@@ -130,7 +130,15 @@
         </classes>
     </test>
 
-
+    <test name="меню Система - Сессии" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.sessions_init">
+                <methods>
+                    <include name="sessions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
 
