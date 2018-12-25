@@ -80,7 +80,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
+    <test name="проверка Левое Меню - Табс панель " enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.tabsPanel_init">
                 <methods>
