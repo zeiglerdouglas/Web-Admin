@@ -8,7 +8,7 @@ import test.java.leftPanel.menuSystema.test.systemTabs_test;
 
 public class systemTabs_init extends setUP_local {
 
-    @Test(description = "проверка титла перед авторизацией и авторизация")
+    @Test(description = "проверка титла - авторизации - Табов ")
     public void systemTabs() {
         System.out.println("проверка титла");
         systemTabs_test.systemTabs_title();

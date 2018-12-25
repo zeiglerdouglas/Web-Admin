@@ -90,7 +90,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="false">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.turnOffOnPanel_init">
                 <methods>
@@ -101,7 +101,15 @@
     </test>
 
 
-
+    <test name="меню Система - переход по вкладкам" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.systemTabs_init">
+                <methods>
+                    <include name="systemTabs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
 
 
