@@ -140,7 +140,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Звонок" enabled="true">
+    <test name="меню Система - Звонок" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.calls_init">
                 <methods>
@@ -149,6 +149,22 @@
             </class>
         </classes>
     </test>
+
+    <test name="меню Система - Видео файлы" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.videoFiles_init">
+                <methods>
+                    <include name="videoFiles"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
+
+
 
 
 
