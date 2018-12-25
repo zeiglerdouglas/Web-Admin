@@ -79,7 +79,7 @@ public class stateSystema extends setUP_local{
 
         System.out.println("конец теста");
     }
-    public void calls() {
+    public static void calls() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
