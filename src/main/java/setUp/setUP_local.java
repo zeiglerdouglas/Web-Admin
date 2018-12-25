@@ -37,7 +37,7 @@ public abstract class setUP_local {
         driver.manage().window().maximize();
 
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.0.200.145/#/login");
+        driver.navigate().to("https://10.0.200.184/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");

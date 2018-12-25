@@ -3,7 +3,7 @@
 
 	<suite name="stateTest" verbose="1" >
 
-	<test name="проверка открытия страницы авторизация титла" enabled="false">
+	<test name="проверка открытия страницы авторизация титла" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.init.autorisations_init">
 				<methods>
@@ -13,7 +13,7 @@
 		</classes>
 	</test>
 
-    <test name="проверка авторизации - подсказки на странице авторизации " enabled="false">
+    <test name="проверка авторизации - подсказки на странице авторизации " enabled="true">
         <classes>
             <class name="test.java.autorisations.init.cluePlace_init">
                 <methods>
@@ -23,7 +23,7 @@
         </classes>
     </test>
 
-    <test name="проверка авторизации - положительная" enabled="false">
+    <test name="проверка авторизации - положительная" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.passAutorisation_init">
                 <methods>
@@ -32,7 +32,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - отрицательная" enabled="false">
+    <test name="проверка авторизации - отрицательная" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.failAutorisation_init">
                 <methods>
@@ -41,7 +41,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - валидация" enabled="false">
+    <test name="проверка авторизации - валидация" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.validationPlace_init">
                 <methods>
@@ -50,7 +50,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - верификация" enabled="false">
+    <test name="проверка авторизации - верификация" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.verificationUsers_init">
                 <methods>
@@ -60,7 +60,7 @@
         </classes>
     </test>
 
-    <test name="проверка авторизации - смена языка ENG/RUS" enabled="false">
+    <test name="проверка авторизации - смена языка ENG/RUS" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.switchLanguage_init">
                 <methods>
@@ -70,7 +70,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - наличие леавого меню" enabled="false">
+    <test name="проверка Левое Меню - наличие леавого меню" enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.availabelMenu_init">
                 <methods>
@@ -80,7 +80,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="false">
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.tabsPanel_init">
                 <methods>
@@ -101,6 +101,78 @@
     </test>
 
 
+    <test name="меню Система - переход по вкладкам" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.systemTabs_init">
+                <methods>
+                    <include name="systemTabs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="меню Система - Сведенья о системе" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.oSystemCenterForm_init">
+                <methods>
+                    <include name="oSystemCenterForm"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Система - Сеть" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.network_init">
+                <methods>
+                    <include name="network"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Система - Сессии" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.sessions_init">
+                <methods>
+                    <include name="sessions"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Система - Звонок" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.calls_init">
+                <methods>
+                    <include name="calls"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Система - Видео файлы" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.videoFiles_init">
+                <methods>
+                    <include name="videoFiles"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Система - Кодеки" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuSystema.init.codecs_init">
+                <methods>
+                    <include name="codecs"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+
 
 
 
@@ -108,101 +180,7 @@
 
 
 <!---->
-    <test name="Успешная авторизация" enabled="false">
-        <classes>
-            <class name="test.java.autorisations.formsAutorisations.passAutorisation">
-                <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-	<test name="Ошибка авторизации" enabled="false">
-		<classes>
-			<class name="test.java.autorisations.formsAutorisations.failAutorisation">
-				<methods>
-					<include name="title"/>
-					<include name="failAutorizations"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Смена языка" enabled="false">
-		<classes>
-			<class name="test.java.autorisations.formsAutorisations.switchLanguage">
-				<methods>
-					<include name="title"/>
-					<include name="switchLanguage"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Подсказки полей" enabled="false">
-		<classes>
-			<class name="test.java.autorisations.formsAutorisations.cluePlace">
-				<methods>
-					<include name="title"/>
-					<include name="cluePlace"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
-	<test name="Валидация полей" enabled="false">
-		<classes>
-			<class name="test.java.autorisations.formsAutorisations.validationPlace">
-				<methods>
-					<include name="title"/>
-					<include name="validationPlace"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
-    <test name="Верификация пользователя" enabled="false">
-        <classes>
-            <class name="test.java.autorisations.formsAutorisations.verificationUsers">
-                <methods>
-                    <include name="title"/>
-                    <include name="verificationUsers"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-	<!--левая панель-->
-	<test name="Сворачивание/Разворачивание панели" enabled="false">
-		<classes>
-			<class name="test.java.leftPanel.turnOffOnPanel">
-				<methods>
-					<include name="title"/>
-					<include name="autorizations"/>
-					<include name="leftPanelTrunOff"/>
-					<include name="leftPanelTrunOn"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
-    <test name="Переход между вкладками" enabled="false">
-        <classes>
-            <class name="test.java.leftPanel.tabsPanel">
-                <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                    <include name="tabsPanel"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-    <test name="Доступные меню" enabled="false">
-        <classes>
-            <class name="test.java.leftPanel.availabelMenu">
-                <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                    <include name="availabelMenu"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
+
     <!--меню система-->
     <test name="система - переход по вкладкам" enabled="false">
         <classes>
