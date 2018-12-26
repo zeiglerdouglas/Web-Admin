@@ -57,7 +57,7 @@ public class state extends setUP_local {
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.37"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.43"));
         System.out.println("конец проверки титла");
     }
     public static void autorizationsPass() {

@@ -22,7 +22,7 @@ public class stateSystema extends setUP_local{
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.39"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.43"));
         System.out.println("проверка фин");
     }
     public static void autorizations() {
@@ -59,7 +59,7 @@ public class stateSystema extends setUP_local{
         }
         System.out.println("конец теста");
     }
-    public void activation() {
+    public static void activation() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
         SelenideElement globalCentral = global.$(byClassName("main-container"));
@@ -546,10 +546,10 @@ public class stateSystema extends setUP_local{
         SelenideElement textInfoAllMemory = collSystemForms.get(7).shouldBe(text("kB"));
         SelenideElement textInfoClearMemory = collSystemForms.get(9).shouldBe(text("kB"));
         SelenideElement textInfoMacAdres = collSystemForms.get(11).shouldBe(text("e0:d5:5e:2e:05:38"));
-        SelenideElement textInfoVersionsProg = collSystemForms.get(13).shouldBe(text("2.6~176"));
+        SelenideElement textInfoVersionsProg = collSystemForms.get(13).shouldBe(text("2.6~246"));
         SelenideElement textInfoStatusActiv = collSystemForms.get(15).shouldBe(text("Активирован"));
         SelenideElement textInfoCapability = collSystemForms.get(17).shouldBe(text("4K, MCU"));
-        SelenideElement textInfoVersionsAPI = collSystemForms.get(19).shouldBe(text("1.3.14"));
+        SelenideElement textInfoVersionsAPI = collSystemForms.get(19).shouldBe(text("1.3.23"));
 
         textInfoCoreSystem.getText();
         textInfoModelProcessor.getText();
