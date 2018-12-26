@@ -183,37 +183,9 @@
 
 
 
-
-
-
-
-
-
 <!---->
 
-    <!--меню система-->
-    <test name="система - переход по вкладкам" enabled="false">
-        <classes>
-            <class name="test.java.leftPanel.menuSystema.systemTabs">
-                <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                    <include name="systemTabs"/>
-                </methods>
-            </class>
-        </classes>
-    </test>
-	<test name="система - сведения о системе - активация" enabled="false">
-		<classes>
-			<class name="test.java.leftPanel.menuSystema.activation">
-				<methods>
-					<include name="title"/>
-					<include name="autorizations"/>
-					<include name="activation"/>
-				</methods>
-			</class>
-		</classes>
-	</test>
+
 
     <!--Журналы-->
     <test name="Журналы - подМеню" enabled="false">
