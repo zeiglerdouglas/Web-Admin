@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import static com.codeborne.selenide.Condition.hidden;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byId;
@@ -525,6 +526,77 @@ public class stateJurnal extends setUP_local {
 
         System.out.println("конец теста");
 
+    }
+
+    public static void clickPage() {
+        System.out.println("определение переменных");
+        SelenideElement global = $(byId("app"));
+        SelenideElement globalCentral = global.$(byClassName("main-container"));
+        SelenideElement globalTabs = globalCentral.$(byClassName("is-top"));
+        SelenideElement wrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement panelLeft = wrapper.$(byClassName("sidebar-container"));
+        globalTabs.is(visible);
+
+        System.out.println("переход на вкладку журналы");
+        ElementsCollection collLeftPanel = panelLeft.$(byClassName("el-menu")).$$(tagName("a"));
+        collLeftPanel.get(1).shouldBe(visible.because("журналы"));
+        collLeftPanel.get(1).hover().click();
+
+        System.out.println("собираем коллецию подМеню");
+        ElementsCollection colljurnalTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
+        System.out.println(colljurnalTabs.get(0).getText());
+        System.out.println(colljurnalTabs.get(1).getText());
+        System.out.println(colljurnalTabs.get(2).getText());
+        System.out.println(colljurnalTabs.get(3).getText());
+        System.out.println(colljurnalTabs.get(4).getText());
+        System.out.println(colljurnalTabs.get(5).getText());
+        System.out.println(colljurnalTabs.get(6).getText());
+        System.out.println(colljurnalTabs.get(7).getText());
+
+
+        colljurnalTabs.get(0).hover().click();
+        //--
+        System.out.println("определение переменной переключения страниц - всего сколько выводить строк страницы перейти поле - перейти ");
+        SelenideElement podval = globalCentral.$(byClassName("el-pagination"));
+        podval.is(visible);
+        System.out.println(podval);
+        //--
+        System.out.println("определение переменной номеров страниц");
+        SelenideElement numberPages = podval.$(byClassName("el-pager"));
+        System.out.println("нажатие на номера страниц");
+        numberPages.find(byText("1")).hover().click();
+        numberPages.find(byText("2")).hover().click();
+        numberPages.find(byText("3")).hover().click();
+        numberPages.find(byText("4")).hover().click();
+
+        numberPages.lastChild().hover().click();
+        numberPages.find(byText("1")).hover().click();
+        //--
+        System.out.println("собираем в коллекцию количество страниц всего");
+        ElementsCollection collPages = podval.$(byClassName("el-pager")).$$(tagName("li"));
+        System.out.println(collPages);
+        //--
+        System.out.println("переключение страниц с помощью стрелок");
+        System.out.println("определение параметра стрелок - next / prev");
+        SelenideElement btnNext = podval.$(byClassName("btn-next"));
+        SelenideElement btnPrev = podval.$(byClassName("btn-prev"));
+        System.out.println("нажатие стрелок - next / prev");
+
+        btnNext.hover().click();
+        btnNext.hover().click();
+        btnNext.hover().click();
+        btnNext.hover().click();
+        btnNext.hover().click();
+
+        btnPrev.hover().click();
+        btnPrev.hover().click();
+        btnPrev.hover().click();
+        btnPrev.hover().click();
+        btnPrev.hover().click();
+
+
+
+        System.out.println("конец теста");
     }
 
 }
