@@ -25,17 +25,18 @@ public class stateJurnal extends setUP_local {
         assertTrue(driver.getTitle().contains("Largo Admin 3.7.43"));
         System.out.println("проверка фин");
     }
+
     public static void autorizations() {
         System.out.println("определение всех переменых ");
         SelenideElement global = $(By.id("app"));
         System.out.println("определение поля имя пользователя");
-        SelenideElement login = global.$(Selectors.byAttribute("name","username"));
+        SelenideElement login = global.$(Selectors.byAttribute("name", "username"));
         System.out.println("проверяем что поле не скрыто");
         login.shouldNotBe(Condition.hidden);
         System.out.println("ввод логина");
         login.setValue("user");
         System.out.println("определение поля пароля");
-        SelenideElement password = global.$(Selectors.byAttribute("name","password"));
+        SelenideElement password = global.$(Selectors.byAttribute("name", "password"));
         System.out.println("проверяем что поле не скрыто");
         password.shouldNotBe(Condition.hidden);
         System.out.println("ввод пароля");
@@ -51,15 +52,12 @@ public class stateJurnal extends setUP_local {
         checkOpen.findElements(byClassName("router-link-active"));
         if (checkOpen.is(visible)) {
             System.out.println("элемент видимый");
-        }
-
-        else{
+        } else {
             System.out.println(" -- элемент не найден -- ");
-            assertTrue(checkOpen.is(Condition.not(visible)),"Элемент не найден");
+            assertTrue(checkOpen.is(Condition.not(visible)), "Элемент не найден");
         }
         System.out.println("конец теста");
     }
-
 
 
     public static void subMenu() {
@@ -157,6 +155,7 @@ public class stateJurnal extends setUP_local {
 
         System.out.println("конец теста");
     }
+
     public static void pageLine() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
@@ -229,13 +228,13 @@ public class stateJurnal extends setUP_local {
         collPageDropDown.get(5).hover().find(byText("35 на странице"));
 
 
-
         System.out.println("переход по страницам с помощью стрелок");
 
         System.out.println("поле перейти");
 
         System.out.println("конец теста");
     }
+
     public static void switchPage() {
         System.out.println("определение переменных");
         SelenideElement global = $(byId("app"));
@@ -523,7 +522,6 @@ public class stateJurnal extends setUP_local {
         Assert.assertTrue(collString.get(35).is(hidden));
 
 
-
         System.out.println("конец теста");
 
     }
@@ -595,8 +593,51 @@ public class stateJurnal extends setUP_local {
         btnPrev.hover().click();
 
 
-
         System.out.println("конец теста");
     }
 
+    public static void intoBoxPage() {
+        System.out.println("определение переменных");
+        SelenideElement global = $(byId("app"));
+        SelenideElement globalCentral = global.$(byClassName("main-container"));
+        SelenideElement globalTabs = globalCentral.$(byClassName("is-top"));
+        SelenideElement wrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement panelLeft = wrapper.$(byClassName("sidebar-container"));
+        globalTabs.is(visible);
+
+        System.out.println("переход на вкладку журналы");
+        ElementsCollection collLeftPanel = panelLeft.$(byClassName("el-menu")).$$(tagName("a"));
+        collLeftPanel.get(1).shouldBe(visible.because("журналы"));
+        collLeftPanel.get(1).hover().click();
+
+        System.out.println("собираем коллецию подМеню");
+        ElementsCollection colljurnalTabs = globalTabs.$(byClassName("el-tabs__nav")).$$(tagName("div"));
+        System.out.println(colljurnalTabs.get(0).getText());
+        System.out.println(colljurnalTabs.get(1).getText());
+        System.out.println(colljurnalTabs.get(2).getText());
+        System.out.println(colljurnalTabs.get(3).getText());
+        System.out.println(colljurnalTabs.get(4).getText());
+        System.out.println(colljurnalTabs.get(5).getText());
+        System.out.println(colljurnalTabs.get(6).getText());
+        System.out.println(colljurnalTabs.get(7).getText());
+
+
+        colljurnalTabs.get(0).hover().click();
+        //--
+        System.out.println("определение переменной переключения страниц - всего сколько выводить строк страницы перейти поле - перейти ");
+        SelenideElement podval = globalCentral.$(byClassName("el-pagination"));
+        podval.is(visible);
+        System.out.println(podval);
+        //--
+        System.out.println("определение параметра окна для ввода страницы");
+        SelenideElement intoBox = podval.$(byClassName("el-input__inner"));
+
+        intoBox.setValue("1").sendKeys("enter");
+        intoBox.setValue("2").sendKeys("enter");
+        intoBox.setValue("3").sendKeys("enter");
+
+
+
+        System.out.println("конец теста");
+    }
 }

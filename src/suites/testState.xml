@@ -222,11 +222,21 @@
         </classes>
     </test>
 
-    <test name="меню Журналы - переключение по номерам страниц" enabled="true">
+    <test name="меню Журналы - переключение по номерам страниц" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.clickPage_init">
                 <methods>
                     <include name="clickPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Журналы - переход на страницу" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.init.intoBoxPage_init">
+                <methods>
+                    <include name="intoBoxPage"/>
                 </methods>
             </class>
         </classes>
