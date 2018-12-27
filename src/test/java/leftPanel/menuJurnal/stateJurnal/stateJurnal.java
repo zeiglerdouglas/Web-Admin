@@ -11,11 +11,10 @@ import org.testng.Assert;
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byClassName;
-import static com.codeborne.selenide.Selectors.byId;
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.tagName;
+import static org.openqa.selenium.Keys.ENTER;
 import static org.testng.Assert.assertTrue;
 
 public class stateJurnal extends setUP_local {
@@ -622,7 +621,6 @@ public class stateJurnal extends setUP_local {
         System.out.println(colljurnalTabs.get(7).getText());
 
 
-        colljurnalTabs.get(0).hover().click();
         //--
         System.out.println("определение переменной переключения страниц - всего сколько выводить строк страницы перейти поле - перейти ");
         SelenideElement podval = globalCentral.$(byClassName("el-pagination"));
@@ -630,12 +628,17 @@ public class stateJurnal extends setUP_local {
         System.out.println(podval);
         //--
         System.out.println("определение параметра окна для ввода страницы");
-        SelenideElement intoBox = podval.$(byClassName("el-input__inner"));
-
-        intoBox.setValue("1").sendKeys("enter");
-        intoBox.setValue("2").sendKeys("enter");
-        intoBox.setValue("3").sendKeys("enter");
-
+        SelenideElement intoBox = podval.$(byClassName("el-pagination__jump"));
+        SelenideElement box = intoBox.$(byAttribute("type","number"));
+        System.out.println("стираем значение страницы в Боксе - выставляем 150");
+        box.setValue("");
+        box.setValue("150").sendKeys(ENTER);
+        System.out.println("стираем значение страницы в Боксе - выставляем 1");
+        box.setValue("");
+        box.setValue("1").sendKeys(ENTER);
+        System.out.println("стираем значение страницы в Боксе - выставляем 9999");
+        box.setValue("");
+        box.setValue("9999").sendKeys(ENTER);
 
 
         System.out.println("конец теста");
