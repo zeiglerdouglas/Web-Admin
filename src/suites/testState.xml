@@ -170,7 +170,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Сведения о системе - Активировать" enabled="true">
+    <test name="меню Система - Сведения о системе - Активировать" enabled="false">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.activation_init">
                 <methods>
@@ -180,45 +180,68 @@
         </classes>
     </test>
 
+<!--Журналы-->
 
-
-
-<!---->
-
-
-
-    <!--Журналы-->
-    <test name="Журналы - подМеню" enabled="false">
+    <test name="меню Журналы - переход по вкладкам" enabled="false">
         <classes>
-            <class name="test.java.leftPanel.menuJurnal.subMenu">
+            <class name="test.java.leftPanel.menuJurnal.init.subMenu_init">
                 <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
                     <include name="subMenu"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="Журналы - фильтр" enabled="false">
+
+    <test name="меню Журналы - календарь" enabled="false">
         <classes>
-            <class name="test.java.leftPanel.menuJurnal.filterCalendar">
+            <class name="test.java.leftPanel.menuJurnal.init.filterCalendar_init">
                 <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                    <include name="filter"/>
+                    <include name="filterCalendar"/>
                 </methods>
             </class>
         </classes>
     </test>
-    <test name="Журналы - Количество строк на страницу" enabled="false">
+
+    <test name="меню Журналы - Количество строк на страницу" enabled="false">
         <classes>
-            <class name="test.java.leftPanel.menuJurnal.inPageLine">
+            <class name="test.java.leftPanel.menuJurnal.init.inPageLine_init">
                 <methods>
-                    <include name="title"/>
-                    <include name="autorizations"/>
-                    <include name="pageLine"/>
+                    <include name="inPageLine"/>
                 </methods>
             </class>
         </classes>
     </test>
+
+    <test name="меню Журналы - переключение выводимых строк на страницу" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.init.switchPage_init">
+                <methods>
+                    <include name="switchPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Журналы - переключение по номерам страниц" enabled="false">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.init.clickPage_init">
+                <methods>
+                    <include name="clickPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="меню Журналы - переход на страницу" enabled="true">
+        <classes>
+            <class name="test.java.leftPanel.menuJurnal.init.intoBoxPage_init">
+                <methods>
+                    <include name="intoBoxPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!---->
+
+
 		</suite>
