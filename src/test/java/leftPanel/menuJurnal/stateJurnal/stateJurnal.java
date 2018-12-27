@@ -641,6 +641,7 @@ public class stateJurnal extends setUP_local {
         box.setValue("9999").sendKeys(ENTER);
 
 
+
         System.out.println("конец теста");
     }
 }
