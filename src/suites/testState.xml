@@ -8,6 +8,7 @@
 			<class name="test.java.autorisations.init.autorisations_init">
 				<methods>
 					<include name="title_autorisations"/>
+
 				</methods>
 			</class>
 		</classes>
