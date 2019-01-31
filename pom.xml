@@ -51,7 +51,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -68,7 +68,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>5.0.0</version>
+            <version>5.0.1</version>
             <scope>compile</scope>
         </dependency>
         <!--<dependency>-->

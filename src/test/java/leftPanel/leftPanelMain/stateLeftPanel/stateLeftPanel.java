@@ -18,7 +18,7 @@ public class stateLeftPanel extends setUP_local{
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.43"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.47"));
         System.out.println("проверка фин");
     }
     public static void autorizations() {

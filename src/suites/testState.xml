@@ -3,7 +3,7 @@
 
 	<suite name="stateTest" verbose="1" >
 
-	<test name="проверка открытия страницы авторизация титла" enabled="false">
+	<test name="проверка открытия страницы авторизация титла" enabled="true">
 		<classes>
 			<class name="test.java.autorisations.init.autorisations_init">
 				<methods>
@@ -14,7 +14,7 @@
 		</classes>
 	</test>
 
-    <test name="проверка авторизации - подсказки на странице авторизации " enabled="false">
+    <test name="проверка авторизации - подсказки на странице авторизации " enabled="true">
         <classes>
             <class name="test.java.autorisations.init.cluePlace_init">
                 <methods>
@@ -24,7 +24,7 @@
         </classes>
     </test>
 
-    <test name="проверка авторизации - положительная" enabled="false">
+    <test name="проверка авторизации - положительная" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.passAutorisation_init">
                 <methods>
@@ -33,7 +33,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - отрицательная" enabled="false">
+    <test name="проверка авторизации - отрицательная" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.failAutorisation_init">
                 <methods>
@@ -42,7 +42,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - валидация" enabled="false">
+    <test name="проверка авторизации - валидация" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.validationPlace_init">
                 <methods>
@@ -51,7 +51,7 @@
             </class>
         </classes>
     </test>
-    <test name="проверка авторизации - верификация" enabled="false">
+    <test name="проверка авторизации - верификация" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.verificationUsers_init">
                 <methods>
@@ -61,7 +61,7 @@
         </classes>
     </test>
 
-    <test name="проверка авторизации - смена языка ENG/RUS" enabled="false">
+    <test name="проверка авторизации - смена языка ENG/RUS" enabled="true">
         <classes>
             <class name="test.java.autorisations.init.switchLanguage_init">
                 <methods>
@@ -71,7 +71,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - наличие леавого меню" enabled="false">
+    <test name="проверка Левое Меню - наличие леавого меню" enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.availabelMenu_init">
                 <methods>
@@ -81,7 +81,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - Табс панель " enabled="false">
+    <test name="проверка Левое Меню - Табс панель " enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.tabsPanel_init">
                 <methods>
@@ -91,7 +91,7 @@
         </classes>
     </test>
 
-    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="false">
+    <test name="проверка Левое Меню - свернуть левое меню с подсказками " enabled="true">
         <classes>
             <class name="test.java.leftPanel.leftPanelMain.init.turnOffOnPanel_init">
                 <methods>
@@ -102,7 +102,7 @@
     </test>
 
 
-    <test name="меню Система - переход по вкладкам" enabled="false">
+    <test name="меню Система - переход по вкладкам" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.systemTabs_init">
                 <methods>
@@ -111,7 +111,7 @@
             </class>
         </classes>
     </test>
-    <test name="меню Система - Сведенья о системе" enabled="false">
+    <test name="меню Система - Сведенья о системе" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.oSystemCenterForm_init">
                 <methods>
@@ -121,7 +121,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Сеть" enabled="false">
+    <test name="меню Система - Сеть" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.network_init">
                 <methods>
@@ -131,7 +131,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Сессии" enabled="false">
+    <test name="меню Система - Сессии" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.sessions_init">
                 <methods>
@@ -141,7 +141,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Звонок" enabled="false">
+    <test name="меню Система - Звонок" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.calls_init">
                 <methods>
@@ -151,7 +151,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Видео файлы" enabled="false">
+    <test name="меню Система - Видео файлы" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.videoFiles_init">
                 <methods>
@@ -161,7 +161,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Кодеки" enabled="false">
+    <test name="меню Система - Кодеки" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.codecs_init">
                 <methods>
@@ -171,7 +171,7 @@
         </classes>
     </test>
 
-    <test name="меню Система - Сведения о системе - Активировать" enabled="false">
+    <test name="меню Система - Сведения о системе - Активировать" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuSystema.init.activation_init">
                 <methods>
@@ -183,7 +183,7 @@
 
 <!--Журналы-->
 
-    <test name="меню Журналы - переход по вкладкам" enabled="false">
+    <test name="меню Журналы - переход по вкладкам" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.subMenu_init">
                 <methods>
@@ -193,7 +193,7 @@
         </classes>
     </test>
 
-    <test name="меню Журналы - календарь" enabled="false">
+    <test name="меню Журналы - календарь" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.filterCalendar_init">
                 <methods>
@@ -203,7 +203,7 @@
         </classes>
     </test>
 
-    <test name="меню Журналы - Количество строк на страницу" enabled="false">
+    <test name="меню Журналы - Количество строк на страницу" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.inPageLine_init">
                 <methods>
@@ -213,7 +213,7 @@
         </classes>
     </test>
 
-    <test name="меню Журналы - переключение выводимых строк на страницу" enabled="false">
+    <test name="меню Журналы - переключение выводимых строк на страницу" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.switchPage_init">
                 <methods>
@@ -223,7 +223,7 @@
         </classes>
     </test>
 
-    <test name="меню Журналы - переключение по номерам страниц" enabled="false">
+    <test name="меню Журналы - переключение по номерам страниц" enabled="true">
         <classes>
             <class name="test.java.leftPanel.menuJurnal.init.clickPage_init">
                 <methods>
