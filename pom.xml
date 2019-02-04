@@ -13,9 +13,31 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+
+        <org.springframework-version>4.2.4.RELEASE</org.springframework-version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <!-- Exclude Commons Logging in favor of SLF4j -->
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.docx4j</groupId>
             <artifactId>docx4j</artifactId>
@@ -40,7 +62,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.0.0</version>
+            <version>3.2.0</version>
         </dependency>
 
         <dependency>
@@ -71,12 +93,24 @@
             <version>5.0.1</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>io.github.estuold</groupId>
+            <artifactId>testrail-api-java-client</artifactId>
+            <version>c76e34016f596795a1774abca02b4a30302725e6</version>
+        </dependency>
         <!--<dependency>-->
             <!--<groupId>org.testng</groupId>-->
             <!--<artifactId>testng</artifactId>-->
             <!--<version>RELEASE</version>-->
             <!--<scope>compile</scope>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.10</version>
+        </dependency>
+
+
     </dependencies>
     <build>
     <sourceDirectory>src</sourceDirectory>

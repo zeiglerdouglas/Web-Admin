@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selectors.byAttribute;
 import static com.codeborne.selenide.Selectors.byClassName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
@@ -56,6 +57,7 @@ public class state extends setUP_local {
     }
 
     public static void title() {
+        sleep(3000);
         System.out.println("проверка титла");
         assertTrue(driver.getTitle().contains("Largo Admin 3.7.48"));
         System.out.println("конец проверки титла");
