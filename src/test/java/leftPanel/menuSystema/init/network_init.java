@@ -1,14 +1,15 @@
 package test.java.leftPanel.menuSystema.init;
 
+import main.java.annotations.TestRailId;
 import main.java.setUp.setUP_local;
 import org.testng.annotations.Test;
 import test.java.leftPanel.menuSystema.test.network_test;
-import test.java.leftPanel.menuSystema.test.systemTabs_test;
 
 
 public class network_init extends setUP_local {
 
-    @Test(description = "проверка вкадки сеть ")
+    @Test(description = "сеть", groups = "menuSystem")
+    @TestRailId(id = "56835",version = "1")
     public void network() {
         System.out.println("проверка титла");
         network_test.network_title();
