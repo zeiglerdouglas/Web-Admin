@@ -1,14 +1,15 @@
 package test.java.leftPanel.menuSystema.init;
 
+import main.java.annotations.TestRailId;
 import main.java.setUp.setUP_local;
 import org.testng.annotations.Test;
-import test.java.leftPanel.leftPanelMain.test.availabelMenu_test;
 import test.java.leftPanel.menuSystema.test.systemTabs_test;
 
 
 public class systemTabs_init extends setUP_local {
 
-    @Test(description = "проверка титла - авторизации - Табов ")
+    @Test(description = "переход по вкладкам", groups = "menuSystem")
+    @TestRailId(id = "56833",version = "1")
     public void systemTabs() {
         System.out.println("проверка титла");
         systemTabs_test.systemTabs_title();
