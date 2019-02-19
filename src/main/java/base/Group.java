@@ -39,13 +39,15 @@ public final class Group {
     public static final String noRT = "noRT";
     public static final String noWeb13 = "noWeb13";
 
+    //-- new --
     public static final String авторизация = "авторизация";
-    public static final String bss = "bss";
-    public static final String kss = "kss";
-    public static final String uss = "uss";
-    public static final String fss = "fss";
-    public static final String ehs = "ehs";
-    public static final String edu = "edu";
+    public static final String leftPanel = "leftPanel";
+    public static final String menuConsole = "menuConsole";
+    public static final String menuJurnal = "menuJurnal";
+    public static final String menuProperites = "menuProperites";
+    public static final String menuService = "menuService";
+    public static final String menuSystem = "menuSystem";
+    //-- old --
     public static final String gf = "gf";
     public static final String go = "go";
     public static final String gz = "gz";

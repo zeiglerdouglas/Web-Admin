@@ -194,72 +194,72 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (platformName.equals("авторизация")) {
             return "авторизация";
         }
-        if (platformName.equals("БСС")) {
-            return "bss";
+        if (platformName.equals("leftPanel")) {
+            return "leftPanel";
         }
-        if (platformName.equals("КСС")) {
-            return "kss";
+        if (platformName.equals("menuConsole")) {
+            return "menuConsole";
         }
-        if (platformName.equals("ЮСС")) {
-            return "uss";
+        if (platformName.equals("menuJurnal")) {
+            return "menuJurnal";
         }
-        if (platformName.equals("ФСС")) {
-            return "fss";
+        if (platformName.equals("menuProperites")) {
+            return "menuProperites";
         }
-        if (platformName.equals("Госфинансы")) {
-            return "gf";
+        if (platformName.equals("menuService")) {
+            return "menuService";
         }
-        if (platformName.equals("Госзаказ")) {
-            return "go";
+        if (platformName.equals("menuSystem")) {
+            return "menuSystem";
         }
-        if (platformName.equals("Охрана труда")) {
-            return "ehs";
-        }
-        if (platformName.equals("Образование")) {
-            return "edu";
-        }
-        if (platformName.equals("ЭЛПУ")) {
-            return "elpu";
-        }
-        if (platformName.equals("КЛПУ")) {
-            return "klpu";
-        }
-        if (platformName.equals("УМД")) {
-            return "umd";
-        }
-        if (platformName.equals("Культура")) {
-            return "cult";
-        }
-        if (platformName.equals("ГЛМС")) {
-            return "glms";
-        }
-        if (platformName.equals("ГЛВ")) {
-            return "glv";
-        }
-        if (platformName.equals("Expertus:GB")) {
-            return "expertus_gl";
-        }
-        if (platformName.equals("Expertus.Kadry")) {
-            return "expertus_k";
-        }
-        if (platformName.equals("Expertus.Med")) {
-            return "expertus_med";
-        }
-        if (platformName.equals("Actualis.KD")) {
-            return "actualis_k";
-        }
-        if (platformName.equals("Actualis.Obraz")) {
-            return "actualis_edu";
-        }
-        if (platformName.equals("Actualis:GB")) {
-            return "actualis_gl";
-        }
-        if (platformName.equals("Actualis:GZ")) {
-            return "actualis_gz";
-        }
-        if (platformName.equals("Actualis.Med")) {
-            return "actualis_med";
-        }
+//        if (platformName.equals("Охрана труда")) {
+//            return "ehs";
+//        }
+//        if (platformName.equals("Образование")) {
+//            return "edu";
+//        }
+//        if (platformName.equals("ЭЛПУ")) {
+//            return "elpu";
+//        }
+//        if (platformName.equals("КЛПУ")) {
+//            return "klpu";
+//        }
+//        if (platformName.equals("УМД")) {
+//            return "umd";
+//        }
+//        if (platformName.equals("Культура")) {
+//            return "cult";
+//        }
+//        if (platformName.equals("ГЛМС")) {
+//            return "glms";
+//        }
+//        if (platformName.equals("ГЛВ")) {
+//            return "glv";
+//        }
+//        if (platformName.equals("Expertus:GB")) {
+//            return "expertus_gl";
+//        }
+//        if (platformName.equals("Expertus.Kadry")) {
+//            return "expertus_k";
+//        }
+//        if (platformName.equals("Expertus.Med")) {
+//            return "expertus_med";
+//        }
+//        if (platformName.equals("Actualis.KD")) {
+//            return "actualis_k";
+//        }
+//        if (platformName.equals("Actualis.Obraz")) {
+//            return "actualis_edu";
+//        }
+//        if (platformName.equals("Actualis:GB")) {
+//            return "actualis_gl";
+//        }
+//        if (platformName.equals("Actualis:GZ")) {
+//            return "actualis_gz";
+//        }
+//        if (platformName.equals("Actualis.Med")) {
+//            return "actualis_med";
+//        }
         return "";
     }
 
@@ -267,100 +267,101 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (group.equals("авторизация")) {
             return "авторизация";
         }
-        if (group.equals("bss")) {
-            return "БСС";
+        if (group.equals("leftPanel")) {
+            return "leftPanel";
         }
-        if (group.equals("kss")) {
-            return "КСС";
+        if (group.equals("menuConsole")) {
+            return "menuConsole";
         }
-        if (group.equals("uss")) {
-            return "ЮСС";
+        if (group.equals("menuJurnal")) {
+            return "menuJurnal";
         }
-        if (group.equals("fss")) {
-            return "ФСС";
+        if (group.equals("menuProperites")) {
+            return "menuProperites";
         }
-        if (group.equals("gf")) {
-            return "Госфинансы";
+        if (group.equals("menuService")) {
+            return "menuService";
         }
-        if (group.equals("go")) {
-            return "Госзаказ";
+        if (group.equals("menuSystem")) {
+            return "menuSystem";
         }
-        if (group.equals("ehs")) {
-            return "Охрана труда";
-        }
-        if (group.equals("edu")) {
-            return "Образование";
-        }
-        if (group.equals("elpu")) {
-            return "ЭЛПУ";
-        }
-        if (group.equals("klpu")) {
-            return "КЛПУ";
-        }
-        if (group.equals("umd")) {
-            return "УМД";
-        }
-        if (group.equals("cult")) {
-            return "Культура";
-        }
-        if (group.equals("glms")) {
-            return "ГЛМС";
-        }
-        if (group.equals("glv")) {
-            return "ГЛВ";
-        }
-        if (group.equals("expertus_gl")) {
-            return "Expertus:GB";
-        }
-        if (group.equals("expertus_k")) {
-            return "Expertus.Kadry";
-        }
-        if (group.equals("expertus_med")) {
-            return "Expertus.Med";
-        }
-        if (group.equals("actualis_k")) {
-            return "Actualis.KD";
-        }
-        if (group.equals("actualis_edu")) {
-            return "Actualis.Obraz";
-        }
-        if (group.equals("actualis_gl")) {
-            return "Actualis:GB";
-        }
-        if (group.equals("actualis_gz")) {
-            return "Actualis:GZ";
-        }
-        if (group.equals("actualis_med")) {
-            return "Actualis.Med";
-        }
+//        if (group.equals("ehs")) {
+//            return "Охрана труда";
+//        }
+//        if (group.equals("edu")) {
+//            return "Образование";
+//        }
+//        if (group.equals("elpu")) {
+//            return "ЭЛПУ";
+//        }
+//        if (group.equals("klpu")) {
+//            return "КЛПУ";
+//        }
+//        if (group.equals("umd")) {
+//            return "УМД";
+//        }
+//        if (group.equals("cult")) {
+//            return "Культура";
+//        }
+//        if (group.equals("glms")) {
+//            return "ГЛМС";
+//        }
+//        if (group.equals("glv")) {
+//            return "ГЛВ";
+//        }
+//        if (group.equals("expertus_gl")) {
+//            return "Expertus:GB";
+//        }
+//        if (group.equals("expertus_k")) {
+//            return "Expertus.Kadry";
+//        }
+//        if (group.equals("expertus_med")) {
+//            return "Expertus.Med";
+//        }
+//        if (group.equals("actualis_k")) {
+//            return "Actualis.KD";
+//        }
+//        if (group.equals("actualis_edu")) {
+//            return "Actualis.Obraz";
+//        }
+//        if (group.equals("actualis_gl")) {
+//            return "Actualis:GB";
+//        }
+//        if (group.equals("actualis_gz")) {
+//            return "Actualis:GZ";
+//        }
+//        if (group.equals("actualis_med")) {
+//            return "Actualis.Med";
+//        }
         return "";
     }
 
     private List<String> getAllGroups() {
         List<String> groups = new ArrayList<String>();
         groups.add("авторизация");
-        groups.add("bss");
-        groups.add("kss");
-        groups.add("uss");
-        groups.add("fss");
-        groups.add("gf");
-        groups.add("go");
-        groups.add("ehs");
-        groups.add("edu");
-        groups.add("elpu");
-        groups.add("klpu");
-        groups.add("umd");
-        groups.add("cult");
-        groups.add("glms");
-        groups.add("glv");
-        groups.add("expertus_gl");
-        groups.add("expertus_k");
-        groups.add("expertus_med");
-        groups.add("actualis_k");
-        groups.add("actualis_edu");
-        groups.add("actualis_gl");
-        groups.add("actualis_gz");
-        groups.add("actualis_med");
+        groups.add("leftPanel");
+        groups.add("menuConsole");
+        groups.add("menuJurnal");
+        groups.add("menuProperites");
+        groups.add("menuService");
+        groups.add("menuSystem");
+        //-- old --
+//        groups.add("ehs");
+//        groups.add("edu");
+//        groups.add("elpu");
+//        groups.add("klpu");
+//        groups.add("umd");
+//        groups.add("cult");
+//        groups.add("glms");
+//        groups.add("glv");
+//        groups.add("expertus_gl");
+//        groups.add("expertus_k");
+//        groups.add("expertus_med");
+//        groups.add("actualis_k");
+//        groups.add("actualis_edu");
+//        groups.add("actualis_gl");
+//        groups.add("actualis_gz");
+//        groups.add("actualis_med");
         return groups;
     }
 
