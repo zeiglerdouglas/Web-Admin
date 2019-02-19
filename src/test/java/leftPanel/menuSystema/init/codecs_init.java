@@ -1,14 +1,15 @@
 package test.java.leftPanel.menuSystema.init;
 
+import main.java.annotations.TestRailId;
 import main.java.setUp.setUP_local;
 import org.testng.annotations.Test;
 import test.java.leftPanel.menuSystema.test.codecs_test;
-import test.java.leftPanel.menuSystema.test.videoFiles_test;
 
 
 public class codecs_init extends setUP_local {
 
-    @Test(description = "проверка вкадки сеть ")
+    @Test(description = "кодеки", groups = "menuSystem")
+    @TestRailId(id = "56961",version = "1")
     public void codecs() {
         System.out.println("проверка титла");
         codecs_test.codecs_title();
