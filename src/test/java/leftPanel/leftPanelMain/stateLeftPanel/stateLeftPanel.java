@@ -1,16 +1,17 @@
 package test.java.leftPanel.leftPanelMain.stateLeftPanel;
 
 
-import com.codeborne.selenide.*;
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.Selectors;
+import com.codeborne.selenide.SelenideElement;
 import main.java.setUp.setUP_local;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.tagName;
-import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 
@@ -18,7 +19,7 @@ public class stateLeftPanel extends setUP_local{
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.48"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.49"));
         System.out.println("проверка фин");
     }
     public static void autorizations() {
