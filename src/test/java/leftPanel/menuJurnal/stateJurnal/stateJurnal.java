@@ -21,7 +21,7 @@ public class stateJurnal extends setUP_local {
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.43"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.48"));
         System.out.println("проверка фин");
     }
 
@@ -639,6 +639,7 @@ public class stateJurnal extends setUP_local {
         System.out.println("стираем значение страницы в Боксе - выставляем 9999");
         box.setValue("");
         box.setValue("9999").sendKeys(ENTER);
+
 
 
         System.out.println("конец теста");

@@ -1,4 +1,4 @@
-package test.java.leftPanel;
+package test.java.leftPanel.tabsPanel_old;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;

@@ -2,9 +2,13 @@
 <suite verbose="1" name="Web Administration" >
 
 
-	<suite-files>
+	<listeners>
+		<listener class-name="test.java.blackMagic.GenerateXmlForTestRailListener"/>
+	</listeners>
 
-        <suite-file path="src/suites/testState.xml"/>
+	<!--<suite-files>-->
 
-	</suite-files>
+        <!--<suite-file path="src/suites/testState.xml"/>-->
+
+	<!--</suite-files>-->
 </suite>
