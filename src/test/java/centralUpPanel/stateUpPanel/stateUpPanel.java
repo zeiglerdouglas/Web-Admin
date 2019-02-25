@@ -8,9 +8,10 @@ import com.codeborne.selenide.SelenideElement;
 import main.java.setUp.setUP_local_oneTest;
 import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
@@ -230,11 +231,27 @@ public class stateUpPanel extends setUP_local_oneTest {
         collscrollWrapper.get(0).click();
         collscrollWrapper.get(0).findAll(byClassName("router-link-exact-active")).texts();
 
+        System.out.println("закрытие вкладок в верхней панели");
+        collscrollWrapper.get(1).shouldBe(visible.because("Журналы"));
+        collscrollWrapper.get(1).find(byClassName("el-icon-close")).hover().click();
 
+        sleep(200);
+        collscrollWrapper.get(1).shouldBe(visible.because("консоль"));
+        collscrollWrapper.get(1).find(byClassName("el-icon-close")).hover().click();
 
+        sleep(200);
+        collscrollWrapper.get(1).shouldBe(visible.because("сервис"));
+        collscrollWrapper.get(1).find(byClassName("el-icon-close")).hover().click();
 
+        sleep(200);
+        collscrollWrapper.get(1).shouldBe(visible.because("настройки"));
+        collscrollWrapper.get(1).find(byClassName("el-icon-close")).hover().click();
 
+        sleep(200);
+        collscrollWrapper.get(0).shouldBe(visible.because("система"));
+        collscrollWrapper.get(0).find(byClassName("el-icon-close")).hover().click();
 
+        sleep(200);
         System.out.println("конец теста");
 
 
