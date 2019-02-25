@@ -31,6 +31,7 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
 
             for (com.codepine.api.testrail.model.Test test : testList) {
                 int caseId = test.getCaseId();
+//                int caseId = test.setStatusId(1);
                 String tlId = String.valueOf(test.getCustomFields().get("tlref"));
                 int version = Integer.valueOf(String.valueOf(test.getCustomFields().get("tlver")));
 
@@ -67,6 +68,8 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
 
             System.out.println(modifiedSuite.toXml());
             System.out.println("модификация XML");
+            System.out.println("/t---/t");
+            System.out.println("/t---/t");
         }
 
     }
