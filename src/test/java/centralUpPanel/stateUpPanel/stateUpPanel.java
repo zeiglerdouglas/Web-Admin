@@ -104,5 +104,9 @@ public class stateUpPanel extends setUP_local_oneTest {
 
         System.out.println("конец теста");
     }
+    public static void upSwitchPanel() {
 
+
+
+    }
 }
