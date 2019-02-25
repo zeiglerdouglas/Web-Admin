@@ -85,7 +85,13 @@ public class statePanel extends setUP_local_oneTest {
         System.out.println(driver.manage().window().getSize());
         System.out.println("конец теста");
     }
+    public static void inConsole() {
+        System.out.println("начало теста - переход в консоль из верхнего меню");
+        System.out.println("------------");
+        System.out.println("определение переменных");
 
+        System.out.println("конец теста");
+    }
 
 
 
