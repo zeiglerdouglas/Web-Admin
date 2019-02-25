@@ -165,12 +165,44 @@ public class statePanel extends setUP_local_oneTest {
     }
 
     public static void inSwitchLanguage() {
-        System.out.println("начало теста - переход в Выход из верхнего меню");
+        System.out.println("начало теста - переход в смена языка из верхнего меню");
         System.out.println("------------");
         System.out.println("определение переменных");
+        SelenideElement global = $(By.id("app"));
+        SelenideElement appWrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement mainContainer = appWrapper.$(byClassName("main-container"));
+        SelenideElement menubar = mainContainer.$(Selectors.byAttribute("role","menubar"));
+        SelenideElement rightMenu = menubar.$(byClassName("right-menu"));
+        System.out.println("находим кнопку AvatarContainer");
+        SelenideElement buttoninternational = rightMenu.$(byClassName("international"));
+        System.out.println(buttoninternational);
+        System.out.println("обрабатываем кнопку buttoninternational");
+        buttoninternational.hover().click();
+        System.out.println("обрабатываем выпадалку из buttoninternational");
+        ElementsCollection elemcoll = $(byAttribute("x-placement","bottom-end")).$$(tagName("li"));
+        System.out.println(elemcoll);
+        System.out.println("находим кнопку - Выход");
+        SelenideElement inSwitchLangRus = elemcoll.find(text("Русский"));
+        SelenideElement inSwitchLangEng = elemcoll.find(text("English"));
+        System.out.println(inSwitchLangRus);
+        System.out.println(inSwitchLangEng);
+        System.out.println("переходим на язык English");
+        inSwitchLangEng.hover();
+        inSwitchLangEng.click();
+        System.out.println("переходим на язык Русский");
+        buttoninternational.hover().click();
+        inSwitchLangRus.hover();
+        inSwitchLangRus.click();
+
+
+        System.out.println("проверка push о смене языка");
+        //--------------------
+        System.out.println("проверка push о смене языка");
 
 
 
+
+        System.out.println("конец теста");
 
     }
 
