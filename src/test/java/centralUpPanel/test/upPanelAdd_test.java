@@ -2,7 +2,6 @@ package test.java.centralUpPanel.test;
 
 import main.java.setUp.setUP_local_oneTest;
 import test.java.centralUpPanel.stateUpPanel.stateUpPanel;
-import test.java.upsidePanel.statePanel.statePanel;
 
 public class upPanelAdd_test extends setUP_local_oneTest {
     public static void activation_a() {
@@ -15,7 +14,7 @@ public class upPanelAdd_test extends setUP_local_oneTest {
         stateUpPanel.title();
     }
     public static void upPanelAdd() {
-        System.out.println("переход в Смена языков из верхнего меню");
+        System.out.println("добавление в верхнию панель навигации");
         stateUpPanel.upPanelAdd();
     }
 
