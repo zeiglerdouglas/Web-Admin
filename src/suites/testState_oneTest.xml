@@ -5,9 +5,9 @@
 
 	<test name="Upside" enabled="true">
 		<classes>
-			<class name="test.java.upsidePanel.init.inExit_init">
+			<class name="test.java.upsidePanel.init.inSwitchLanguage_init">
 				<methods>
-					<include name="inExit"/>
+					<include name="inSwitchLanguage"/>
 
 				</methods>
 			</class>

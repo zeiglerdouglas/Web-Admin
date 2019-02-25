@@ -164,4 +164,14 @@ public class statePanel extends setUP_local_oneTest {
         System.out.println("конец теста");
     }
 
+    public static void inSwitchLanguage() {
+        System.out.println("начало теста - переход в Выход из верхнего меню");
+        System.out.println("------------");
+        System.out.println("определение переменных");
+
+
+
+
+    }
+
 }
