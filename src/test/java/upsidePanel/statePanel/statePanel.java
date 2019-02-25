@@ -4,7 +4,7 @@ package test.java.upsidePanel.statePanel;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
-import main.java.setUp.setUP_local;
+import main.java.setUp.setUP_local_oneTest;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -15,7 +15,7 @@ import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
 
-public class statePanel extends setUP_local{
+public class statePanel extends setUP_local_oneTest {
 
     public static void title() {
         System.out.println("проверка титла");
@@ -56,7 +56,11 @@ public class statePanel extends setUP_local{
         }
         System.out.println("конец теста");
     }
+    public static void inConsole() {
 
+
+
+    }
 
 
 

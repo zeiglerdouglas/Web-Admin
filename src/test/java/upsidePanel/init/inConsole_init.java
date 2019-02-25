@@ -1,24 +1,24 @@
 package test.java.upsidePanel.init;
 
 import main.java.annotations.TestRailId;
-import main.java.setUp.setUP_local;
+import main.java.setUp.setUP_local_oneTest;
 import org.testng.annotations.Test;
-import test.java.leftPanel.menuSystema.test.activation_test;
+import test.java.upsidePanel.test.inConsole_test;
 
 
-public class inConsole_init extends setUP_local {
+public class inConsole_init extends setUP_local_oneTest {
 
-    @Test(description = "присутствие кнопки активация",groups = "upsidePanel")
-    @TestRailId(id = "60008",version = "1")
-    public void activation() {
+    @Test(description = "вызов консоли из верхнего меню")
+    @TestRailId(id = "56875",version = "1")
+    public void inConsole() {
         System.out.println("проверка титла");
-        activation_test.activation_title();
+        inConsole_test.activation_title();
 
         System.out.println("проверка авторизации");
-        activation_test.activation_a();
+        inConsole_test.activation_a();
 
-        System.out.println("проверка Табов в меню система");
-        activation_test.activation();
+        System.out.println("проверка перехода в консоль из верхней панели ");
+        inConsole_test.inConsole();
     }
 
 }

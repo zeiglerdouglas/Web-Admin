@@ -5,9 +5,9 @@
 
 	<test name="Upside" enabled="true">
 		<classes>
-			<class name="test.java.upsidePanel.init">
+			<class name="test.java.upsidePanel.init.inConsole_init">
 				<methods>
-					<include name="title_autorisations"/>
+					<include name="inConsole"/>
 
 				</methods>
 			</class>
