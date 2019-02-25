@@ -122,7 +122,46 @@ public class statePanel extends setUP_local_oneTest {
 
         System.out.println("конец теста");
     }
+    public static void inExit() {
+        System.out.println("начало теста - переход в Выход из верхнего меню");
+        System.out.println("------------");
+        System.out.println("определение переменных");
+        SelenideElement global = $(By.id("app"));
+        SelenideElement appWrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement mainContainer = appWrapper.$(byClassName("main-container"));
+        SelenideElement menubar = mainContainer.$(Selectors.byAttribute("role","menubar"));
+        SelenideElement rightMenu = menubar.$(byClassName("right-menu"));
+        System.out.println("находим кнопку AvatarContainer");
+        SelenideElement buttonAvatarContainer = rightMenu.$(byClassName("avatar-container"));
+        System.out.println(buttonAvatarContainer);
+        System.out.println("обрабатываем кнопку AvatarContainer");
+        buttonAvatarContainer.hover().click();
+        System.out.println("обрабатываем выпадалку из AvatarContainer");
+        ElementsCollection elemcoll = $(byAttribute("x-placement","bottom-end")).$$(tagName("li"));
+        System.out.println(elemcoll);
+        System.out.println("находим кнопку - Выход");
+        SelenideElement inExit = elemcoll.find(text("Выход"));
+        System.out.println(inExit);
+        System.out.println("переходим в Выход");
+        inExit.hover();
+        inExit.click();
+        System.out.println("проверка перехода в Выход");
+        System.out.println("определение поля имя пользователя");
+        SelenideElement login = global.$(Selectors.byAttribute("name","username"));
+        System.out.println("проверяем что поле не скрыто");
+        login.shouldNotBe(Condition.hidden);
+        System.out.println("определение поля пароля");
+        SelenideElement password = global.$(Selectors.byAttribute("name","password"));
+        System.out.println("проверяем что поле не скрыто");
+        password.shouldNotBe(Condition.hidden);
+        System.out.println("определение кнопки войти");
+        SelenideElement enter = global.$(byText("Войти"));
+        System.out.println("проверяем что поле не скрыто");
+        enter.shouldNotBe(Condition.hidden);
 
 
+
+        System.out.println("конец теста");
+    }
 
 }
