@@ -48,6 +48,7 @@ public final class Group {
     public static final String menuService = "menuService";
     public static final String menuSystem = "menuSystem";
     public static final String upsidePanel = "upsidePanel";
+    public static final String centralUpPanel = "centralUpPanel";
     //-- old --
     public static final String gf = "gf";
     public static final String go = "go";

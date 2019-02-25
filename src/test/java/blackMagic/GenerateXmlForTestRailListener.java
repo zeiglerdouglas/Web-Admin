@@ -218,6 +218,9 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (platformName.equals("upsidePanel")) {
             return "upsidePanel";
         }
+        if (platformName.equals("centralUpPanel")) {
+            return "centralUpPanel";
+        }
 //        if (platformName.equals("Охрана труда")) {
 //            return "ehs";
 //        }
@@ -294,6 +297,9 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (group.equals("upsidePanel")) {
             return "upsidePanel";
         }
+        if (group.equals("centralUpPanel")) {
+            return "centralUpPanel";
+        }
 //        if (group.equals("ehs")) {
 //            return "Охрана труда";
 //        }
@@ -355,6 +361,7 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         groups.add("menuService");
         groups.add("menuSystem");
         groups.add("upsidePanel");
+        groups.add("centralUpPanel");
         //-- old --
 //        groups.add("ehs");
 //        groups.add("edu");
