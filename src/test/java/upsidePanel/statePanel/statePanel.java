@@ -2,15 +2,16 @@ package test.java.upsidePanel.statePanel;
 
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
 import main.java.setUp.setUP_local_oneTest;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byClassName;
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
@@ -56,10 +57,33 @@ public class statePanel extends setUP_local_oneTest {
         }
         System.out.println("конец теста");
     }
-    public static void inConsole() {
+    public static void fullScreen() {
+        System.out.println("начало теста - полноэкранный режим");
+        System.out.println("------------");
+        System.out.println("определение переменных");
+        SelenideElement global = $(By.id("app"));
+        SelenideElement appWrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement mainContainer = appWrapper.$(byClassName("main-container"));
+        SelenideElement menubar = mainContainer.$(Selectors.byAttribute("role","menubar"));
+        SelenideElement rightMenu = menubar.$(byClassName("right-menu"));
+        SelenideElement buttonScreenFull = rightMenu.$(byClassName("screenfull"));
+        System.out.println(buttonScreenFull);
+        System.out.println("находим и обрабатываем кнопку FullScreen");
+        buttonScreenFull.hover();
+        //--
+        System.out.println("находим подсказку при наведении на кнопку");
+        ElementsCollection elemcoll = $$(byAttribute("role","tooltip"));
+        SelenideElement text = elemcoll.find(Condition.text("Полный экран"));
+        System.out.println(text);
+        //--
+        System.out.println("вход в полноэкранный режим");
+        buttonScreenFull.hover().click();
+        System.out.println(driver.manage().window().getSize());
 
-
-
+        System.out.println("выход в полноэкранный режим");
+        buttonScreenFull.hover().click();
+        System.out.println(driver.manage().window().getSize());
+        System.out.println("конец теста");
     }
 
 
