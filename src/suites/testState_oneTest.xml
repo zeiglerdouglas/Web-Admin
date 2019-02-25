@@ -5,9 +5,9 @@
 
 	<test name="Upside" enabled="true">
 		<classes>
-			<class name="test.java.centralUpPanel.init.upSwitchPanel_init">
+			<class name="test.java.centralUpPanel.init.upClosedPanel_init">
 				<methods>
-					<include name="upSwitchPanel"/>
+					<include name="upClosedPanel"/>
 
 				</methods>
 			</class>
