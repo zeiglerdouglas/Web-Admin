@@ -8,6 +8,7 @@ import com.codeborne.selenide.SelenideElement;
 import main.java.setUp.setUP_local_oneTest;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -89,6 +90,35 @@ public class statePanel extends setUP_local_oneTest {
         System.out.println("начало теста - переход в консоль из верхнего меню");
         System.out.println("------------");
         System.out.println("определение переменных");
+        SelenideElement global = $(By.id("app"));
+        SelenideElement appWrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement mainContainer = appWrapper.$(byClassName("main-container"));
+        SelenideElement menubar = mainContainer.$(Selectors.byAttribute("role","menubar"));
+        SelenideElement rightMenu = menubar.$(byClassName("right-menu"));
+        System.out.println("находим кнопку AvatarContainer");
+        SelenideElement buttonAvatarContainer = rightMenu.$(byClassName("avatar-container"));
+        System.out.println(buttonAvatarContainer);
+        System.out.println("обрабатываем кнопку AvatarContainer");
+        buttonAvatarContainer.hover().click();
+        System.out.println("обрабатываем выпадалку из AvatarContainer");
+        ElementsCollection elemcoll = $(byAttribute("x-placement","bottom-end")).$$(tagName("li"));
+        System.out.println(elemcoll);
+        System.out.println("находим кнопку - Консоль");
+        SelenideElement inConsole = elemcoll.find(text("Консоль"));
+        System.out.println(inConsole);
+        System.out.println("переходим в Консоль");
+        inConsole.hover();
+        inConsole.click();
+        System.out.println("проверка перехода в Консоль");
+        System.out.println("собираем в коллекцию элементы");
+        SelenideElement wrapper = global.$(byClassName("app-wrapper"));
+        SelenideElement panelLeft = wrapper.$(byClassName("sidebar-container"));
+        panelLeft.shouldBe(visible.because("находиться слева"));
+        ElementsCollection collLeftPanel = panelLeft.$(byClassName("el-menu")).$$(tagName("a"));
+        collLeftPanel.get(2).find(byClassName("router-link-exact-active"));
+        collLeftPanel.get(2).getText();
+        System.out.println(collLeftPanel.get(2).getText());
+
 
         System.out.println("конец теста");
     }
