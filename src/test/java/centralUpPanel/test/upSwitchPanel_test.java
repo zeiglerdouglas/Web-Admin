@@ -1,9 +1,9 @@
 package test.java.centralUpPanel.test;
 
-import main.java.setUp.setUP_local_oneTest;
+import main.java.setUp.setUP_local;
 import test.java.centralUpPanel.stateUpPanel.stateUpPanel;
 
-public class upSwitchPanel_test extends setUP_local_oneTest {
+public class upSwitchPanel_test extends setUP_local {
     public static void activation_a() {
         System.out.println("авторизация");
         stateUpPanel.autorizations();

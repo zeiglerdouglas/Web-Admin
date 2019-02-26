@@ -1,9 +1,9 @@
 package test.java.upsidePanel.test;
 
-import main.java.setUp.setUP_local_oneTest;
+import main.java.setUp.setUP_local;
 import test.java.upsidePanel.statePanel.statePanel;
 
-public class fullScreen_test extends setUP_local_oneTest {
+public class fullScreen_test extends setUP_local {
     public static void activation_a() {
         System.out.println("авторизация");
         statePanel.autorizations();

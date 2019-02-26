@@ -5,7 +5,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.Selectors;
 import com.codeborne.selenide.SelenideElement;
-import main.java.setUp.setUP_local_oneTest;
+import main.java.setUp.setUP_local;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
@@ -17,7 +17,7 @@ import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
 
 
-public class statePanel extends setUP_local_oneTest {
+public class statePanel extends setUP_local {
 
     public static void title() {
         System.out.println("проверка титла");
