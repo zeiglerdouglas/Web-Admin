@@ -9,7 +9,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 
 import static com.codeborne.selenide.Condition.hidden;
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
@@ -21,7 +20,7 @@ public class stateJurnal extends setUP_local {
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.48"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.49"));
         System.out.println("проверка фин");
     }
 

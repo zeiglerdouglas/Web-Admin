@@ -1,14 +1,16 @@
 package test.java.leftPanel.leftPanelMain.init;
 
+import main.java.annotations.TestRailId;
 import main.java.setUp.setUP_local;
 import org.testng.annotations.Test;
-import test.java.autorisations.test.autorisations_test;
 import test.java.leftPanel.leftPanelMain.test.availabelMenu_test;
 
 
 public class availabelMenu_init extends setUP_local {
 
-    @Test(description = "проверка титла перед авторизацией и авторизация")
+    @Test(description = "доступное меню", groups = "leftPanel")
+    @TestRailId(id = "56490",version = "1")
+
     public void availableMenu() {
         System.out.println("проверка титла");
         availabelMenu_test.leftPanel_title();

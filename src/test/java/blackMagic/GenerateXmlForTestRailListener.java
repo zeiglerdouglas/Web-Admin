@@ -31,6 +31,7 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
 
             for (com.codepine.api.testrail.model.Test test : testList) {
                 int caseId = test.getCaseId();
+//                int caseId = test.setStatusId(1);
                 String tlId = String.valueOf(test.getCustomFields().get("tlref"));
                 int version = Integer.valueOf(String.valueOf(test.getCustomFields().get("tlver")));
 
@@ -67,6 +68,8 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
 
             System.out.println(modifiedSuite.toXml());
             System.out.println("модификация XML");
+            System.out.println("/t---/t");
+            System.out.println("/t---/t");
         }
 
     }
@@ -212,6 +215,12 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (platformName.equals("menuSystem")) {
             return "menuSystem";
         }
+        if (platformName.equals("upsidePanel")) {
+            return "upsidePanel";
+        }
+        if (platformName.equals("centralUpPanel")) {
+            return "centralUpPanel";
+        }
 //        if (platformName.equals("Охрана труда")) {
 //            return "ehs";
 //        }
@@ -285,6 +294,12 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         if (group.equals("menuSystem")) {
             return "menuSystem";
         }
+        if (group.equals("upsidePanel")) {
+            return "upsidePanel";
+        }
+        if (group.equals("centralUpPanel")) {
+            return "centralUpPanel";
+        }
 //        if (group.equals("ehs")) {
 //            return "Охрана труда";
 //        }
@@ -345,6 +360,8 @@ public class GenerateXmlForTestRailListener implements IAlterSuiteListener {
         groups.add("menuProperites");
         groups.add("menuService");
         groups.add("menuSystem");
+        groups.add("upsidePanel");
+        groups.add("centralUpPanel");
         //-- old --
 //        groups.add("ehs");
 //        groups.add("edu");
