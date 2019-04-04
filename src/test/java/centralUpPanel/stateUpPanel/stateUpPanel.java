@@ -20,7 +20,7 @@ public class stateUpPanel extends setUP_local {
 
     public static void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.49"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.50"));
         System.out.println("проверка фин");
     }
     public static void autorizations() {

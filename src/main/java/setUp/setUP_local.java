@@ -3,6 +3,7 @@ package main.java.setUp;
 import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.BrowserType;
@@ -25,6 +26,7 @@ public abstract class setUP_local {
         caps.setBrowserName("chrome");
         caps.setBrowserName(BrowserType.CHROME);
         caps.setPlatform(org.openqa.selenium.Platform.WINDOWS);
+
         if (browser.equalsIgnoreCase("Chrome"))
             caps = DesiredCapabilities.chrome();
         PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/main/resources/log4j.properties");
