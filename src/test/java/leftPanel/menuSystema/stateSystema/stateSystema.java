@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Condition.disappears;
 import static com.codeborne.selenide.Condition.hidden;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 import static org.junit.Assert.assertFalse;
 import static org.openqa.selenium.By.tagName;
 import static org.testng.Assert.assertTrue;
@@ -258,8 +259,8 @@ public class stateSystema extends setUP_local{
 
         System.out.println("проверка в общей таблице сообщения - аудио кадека - аудио кодеки есть");
 
-        String rowCodecs = "G7221, OPUS, Speex, G722, PCMA, PCMU, G726, G728, G729, gsm, ms-gsm, iLBC, isac, lpc10, AMR, AMR-WB";
-        String rowText = row.get(0).find(byText("G7221, OPUS, Speex, G722, PCMA, PCMU, G726, G728, G729, gsm, ms-gsm, iLBC, isac, lpc10, AMR, AMR-WB")).shouldBe(visible).text();
+        String rowCodecs = "G7221, OPUS, Speex, G722, PCMA, PCMU, G728, G729, G723";
+        String rowText = row.get(0).find(byText("G7221, OPUS, Speex, G722, PCMA, PCMU, G728, G729, G723")).shouldBe(visible).text();
         boolean eq = rowText.equals(rowCodecs);
         System.out.println(eq);
         assertTrue(eq);
@@ -447,7 +448,10 @@ public class stateSystema extends setUP_local{
         SelenideElement textStatusH323= collNetwork.get(2).shouldBe(text("Статус H.323")).hover();
         SelenideElement textStatusSIP= collNetwork.get(4).shouldBe(text("Статус SIP")).hover();
         SelenideElement textStatusCall= collNetwork.get(6).shouldBe(text("Статус звонка")).hover();
-        SelenideElement texteth0= collNetwork.get(8).shouldBe(text("eth0")).hover();
+        SelenideElement textPriorityVideo = collNetwork.get(8).shouldBe(text("Приоритет видео")).hover();
+        SelenideElement textPriorityAudio = collNetwork.get(10).shouldBe(text("Приоритет аудио")).hover();
+        SelenideElement texteth0 = collNetwork.get(12).shouldBe(text("eth0")).hover();
+
 
         textIpAdress.getText();
         textStatusH323.getText();
@@ -459,6 +463,8 @@ public class stateSystema extends setUP_local{
         System.out.println(textStatusH323);
         System.out.println(textStatusSIP);
         System.out.println(textStatusCall);
+        System.out.println(textPriorityVideo);
+        System.out.println(textPriorityAudio);
         System.out.println(texteth0);
 
 
@@ -546,10 +552,10 @@ public class stateSystema extends setUP_local{
         SelenideElement textInfoAllMemory = collSystemForms.get(7).shouldBe(text("kB"));
         SelenideElement textInfoClearMemory = collSystemForms.get(9).shouldBe(text("kB"));
         SelenideElement textInfoMacAdres = collSystemForms.get(11).shouldBe(text("e0:d5:5e:2e:05:38"));
-        SelenideElement textInfoVersionsProg = collSystemForms.get(13).shouldBe(text("2.6~246"));
+        SelenideElement textInfoVersionsProg = collSystemForms.get(13).shouldBe(text("2.6~393"));
         SelenideElement textInfoStatusActiv = collSystemForms.get(15).shouldBe(text("Активирован"));
         SelenideElement textInfoCapability = collSystemForms.get(17).shouldBe(text("4K, MCU"));
-        SelenideElement textInfoVersionsAPI = collSystemForms.get(19).shouldBe(text("1.3.23"));
+        SelenideElement textInfoVersionsAPI = collSystemForms.get(19).shouldBe(text("1.3.35"));
 
         textInfoCoreSystem.getText();
         textInfoModelProcessor.getText();
@@ -673,7 +679,8 @@ public class stateSystema extends setUP_local{
         SelenideElement headerWrapper = header.$(byClassName("el-table--medium"));
         SelenideElement tableColumn = headerWrapper.$(byClassName("el-table-column--selection"));
         SelenideElement check = tableColumn.$(byClassName("cell"));
-        SelenideElement checkBox = check.$(byAttribute("role","checkbox"));
+        SelenideElement checkBox = check.$(byAttribute("role","checkbox")).$(byClassName("el-checkbox"));
+        sleep(500);
         checkBox.hover().click();
 
 

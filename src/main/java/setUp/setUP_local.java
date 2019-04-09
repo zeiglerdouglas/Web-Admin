@@ -40,7 +40,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+//        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -65,7 +66,9 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
+
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
 
@@ -89,7 +92,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -114,7 +118,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -139,7 +144,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -164,7 +170,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -189,7 +196,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -214,7 +222,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
@@ -239,7 +248,8 @@ public abstract class setUP_local {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.11.4.201/#/login");
+        //        driver.navigate().to("https://10.11.4.201/#/login");
+        driver.navigate().to("https://10.11.4.195/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
