@@ -9,7 +9,7 @@ public class title extends setUP_local {
     @Test(description = "проверка титла перед авторизацией")
     public void title() {
         System.out.println("проверка титла");
-        assertTrue(driver.getTitle().contains("Largo Admin 3.7.48"));
+        assertTrue(driver.getTitle().contains("Largo Admin 3.7.50"));
         System.out.println("проверка титла");
     }
 

@@ -69,6 +69,8 @@ public final class Group {
 
 
     //--users--
+    public static final String LoginUserAdmin = "test|12345678";
+    //--old--
     public static final String LoginNoAccess = "NoAccess|12345";
     public static final String LoginDEMO = "CreditAccess|12345";
     public static final String LoginPaid = "PaidAccess|12345";

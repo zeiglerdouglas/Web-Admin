@@ -10,7 +10,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
-import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import static com.codeborne.selenide.Configuration.browser;
@@ -18,10 +17,10 @@ import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 
 
 public class setUP_local_oneTest {
-    public static WebDriver driver;
+    public WebDriver driver;
 
-    @BeforeClass()
-    public void setUp()throws MalformedURLException {
+    @BeforeClass(description = "local_one")
+    public void setUp() {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setBrowserName("chrome");
         caps.setBrowserName(BrowserType.CHROME);
@@ -39,19 +38,19 @@ public class setUP_local_oneTest {
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         System.out.println("открытие адреса");
-        driver.navigate().to("https://10.0.200.168/#/login");
+        driver.navigate().to("https://10.0.200.157/#/login");
 
         System.out.println("Адрес открылся");
         System.out.println("-------------------");
 
     }
 
-    @AfterClass()
+    @AfterClass(description = "local_one_down")
     public void tearDown() {
         System.out.println("Закрываем браузер");
         driver.close();
         driver.quit();
     }
 
-    }
+}
 

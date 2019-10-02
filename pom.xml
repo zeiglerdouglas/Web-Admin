@@ -51,20 +51,8 @@
 
 
     <dependencies>
-
-        <dependency>
-            <groupId>org.nd4j</groupId>
-            <artifactId>nd4j-native-platform</artifactId>
-            <version>0.5.0</version>
-        </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.4.0</version>
-            <scope>test</scope>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
         <dependency>
@@ -89,11 +77,7 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.networknt/exception -->
-        <dependency>
-            <groupId>com.networknt</groupId>
-            <artifactId>exception</artifactId>
-            <version>2.0.0-BETA2</version>
-        </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.touchbit.testrail4j/jackson2-api-model -->
         <dependency>
@@ -138,7 +122,7 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>3.3.0</version>
+            <version>2.1.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
@@ -182,7 +166,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>3.14.0</version>
+            <version>3.141.59</version>
         </dependency>
         <dependency>
             <groupId>org.reflections</groupId>
@@ -198,8 +182,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>5.1.0</version>
-            <scope>compile</scope>
+            <version>5.3.1</version>
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-	<suite name="stateTest_oneTest" verbose="1" >
+	<suite name="stateTest_oneTest_one" verbose="1" >
 
-	<test name="Upside" enabled="true">
+	<test name="autorisations_init_new" enabled="true">
 		<classes>
-			<class name="test.java.centralUpPanel.init.upClosedPanel_init">
+			<class name="test.java.autorisations.autorizations_new.autorisations_init_new">
 				<methods>
-					<include name="upClosedPanel"/>
+					<include name="title_autorisations"/>
+					<include name="a_autorisations"/>
 
 				</methods>
 			</class>
